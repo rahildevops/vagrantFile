@@ -33,7 +33,7 @@
 6. cp /d/VM/vagrant/forgerock/server.xml  /d/binaries/software/am/
 7. cp /d/VM/vagrant/forgerock/config.properties  /d/binaries/software/am/
 6. vagrant up
-7. open the URL in your local https://login.afiyan.com/login
+7. open the URL in your local https://login.afiyan.com:8443/login
 8. enter amadmin\SecAuth0
 
 ---------------------------------------------------------
@@ -59,36 +59,3 @@
 ---------------------------------------------------------
 		End of IDM install
 ---------------------------------------------------------
-
-
-3. Make the following directory structure
-
-	a. mkdir -p /d/VM /d/binaries/software/idm /d/binaries/software/am
-
-4. move the following 
-        
-	a. 
-	b 
-
-
-5. add following into your host file.
-
-	192.168.56.42  ds.afiyan.com  login.afiyan.com
-	192.168.56.82  keycloak.afiyan.com keycloak
-	192.168.56.43  idm.afiyan.com
-
-6. To install idm do the following 
-	
-	a. move your idm binaries to /d/binaries/software/idm
- 	b. cd /d/VM/vagrant/forgerockidm
-	c. vagrant up
-	c. wait for the VM to start.
-	d. http://idm.afiyan.com:8080/
-	e. openidm-admin\openidm-admin
-	
-5. Access URL's
-	a. idm http://idm.afiyan.com:8080/
-
-
-6. credentials 
-	
