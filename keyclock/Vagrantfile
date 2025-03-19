@@ -162,25 +162,25 @@ echo "Waiting for PostgreSQL to start..."
 sleep 20
 sudo docker stop keycloak
 sudo docker rm keycloak 
-sudo /usr/bin/docker run -d \\
+ /usr/bin/docker run -d \\
  --name keycloak \\
- --restart always \\
   -p 8080:8080 \\
   -e KC_DB=postgres \\
-  -e KC_DB_URL=jdbc:postgresql://#{keycloak_hostname}:5432/#{db_Name} \\
+  -e KC_DB_URL=jdbc:postgresql://#{db_hostname_without_domain}:5432/keycloak \\
   -e KC_DB_USERNAME=#{db_username} \\
   -e KC_DB_PASSWORD=#{db_password} \\
   -e KC_HOSTNAME=#{keycloak_hostname} \\
   -e KC_HTTP_ENABLED=true \\
  -e KC_BOOTSTRAP_ADMIN_USERNAME=#{keycloak_bootstrap_username} \\
- -e KC_BOOTSTRAP_ADMIN_PASSWORD=#{keycloak_bootstrap_password}  \\
- quay.io/keycloak/keycloak:26.1.4 start-dev
+ -e KC_BOOTSTRAP_ADMIN_PASSWORD=#{keycloak_bootstrap_password} \\
+ quay.io/keycloak/keycloak:26.1.4 start-dev --verbose
 
  echo completed the keycloak instalation.....................
 #sleep 30
 #sudo docker start  keycloak
 # Verify services are running
 sudo systemctl status postgres.service
+sudo apt install postgresql-client -y
 #sudo systemctl status keycloak.service
 
 SHELL
