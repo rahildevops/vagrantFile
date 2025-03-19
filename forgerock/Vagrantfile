@@ -1,0 +1,241 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://vagrantcloud.com/search.
+  config.vm.box = "ubuntu/jammy64"
+
+  # Disable automatic box update checking. If you disable this, then
+  # boxes will only be checked for updates when the user runs
+  # `vagrant box outdated`. This is not recommended.
+  # config.vm.box_check_update = false
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  # NOTE: This will enable public access to the opened port
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine and only allow access
+  # via 127.0.0.1 to disable public access
+  # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+
+  # Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+   config.vm.network "private_network", ip: "192.168.56.42"
+
+  # Create a public network, which generally matched to bridged network.
+  # Bridged networks make the machine appear as another physical device on
+  # your network.
+   config.vm.network "public_network"
+
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+   config.vm.synced_folder "../../../binaries/software", "/app/forgerock/download/am"
+   config.vm.hostname = "login.afiyan.com"
+
+  # Disable the default share of the current code directory. Doing this
+  # provides improved isolation between the vagrant box and your host
+  # by making sure your Vagrantfile isn't accessible to the vagrant box.
+  # If you use this you may want to enable additional shared subfolders as
+  # shown above.
+  # config.vm.synced_folder ".", "/vagrant", disabled: true
+
+  # Provider-specific configuration so you can fine-tune various
+  # backing providers for Vagrant. These expose provider-specific options.
+  # Example for VirtualBox:
+  #
+   config.vm.provider "virtualbox" do |vb|
+  #   # Display the VirtualBox GUI when booting the machine
+  #   vb.gui = true
+  #
+  #   # Customize the amount of memory on the VM:
+     vb.memory = "4024"
+     vb.cpus = "4"
+   end
+  #
+  # View the documentation for the provider you are using for more
+  # information on available options.
+
+  # Enable provisioning with a shell script. Additional provisioners such as
+  # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
+  # documentation for more information about their specific syntax and use.
+  config.vm.provision "shell", inline: <<-SHELL
+  #   apt-get update
+  #   apt-get install -y apache2
+  ###Folder structure creation####
+  software_location=/app/forgerock/software/
+  install_locaion=/app/forgerock/install/
+  backup_location=/app/forgerock/backup/
+  tomcat_backup_location=/app/forgerock/backup/tomcat
+  tmp_location=/app/forgerock/tmp/
+  secret_location=/app/forgerock/.secret/
+  download_location=/app/forgerock/download/
+  tools_location=/app/forgerock/tools/
+  secret_file=${secret_location}.secret
+  trust_store=${secret_location}amTrustStore
+  home_location=/home/rahil/
+  scipts_location=/app/forgerock/scripts/
+  config_location=/app/forgerock/config/
+  ldap_instance=/app/forgerock/config/opendj/
+  ############### CREATE FOLDER #################################
+  mkdir -p ${install_locaion} ${install_locaion}tomcat ${software_location} ${tools_location}config  ${tmp_location} ${backup_location} ${backup_location}tomcat ${scipts_location} ${secret_location}  /app/forgerock/config ${home_location}.opendj ${backup_location}opendj /app/forgerock/config/am $ldap_instance /app/forgerock/config/ig
+  ############Software Version ############################
+  AM_binaries=AM-7.5.1.zip
+  AM_WAR=AM-7.5.1.war
+  DS=DS-7.5.1.zip
+  tomcat=apache-tomcat-9.0.102.tar.gz
+  AM_CONFIGURATION_TOOL=AM-SSOConfiguratorTools-5.1.3.28.zip
+  AM_CONFIGURATION_TOOL_JAR=openam-configurator-tool-14.1.3.28.jar
+  #############Set Password for reference###################################
+  Pass_forgerock=SecAuth0
+  #############Set hostname for reference###################################
+  AM_hostname=login.afiyan.com
+  hostname=login.afiyan.com
+  ###############PROPERTIES ENTRY FOR DS ########################
+  serverID=standalone
+  adminPort=4444
+  ldapsPort=1636
+  httpPort=8443
+  idenityStoreBaseDN=ou=afiyan
+  ############### PROPERTIES DETAILS FOR SELF-SIIGNED CERT########
+   cat > ${secret_location}selfsigned.properties <<EOF
+  [req] 
+  default_bits = 4096 
+  prompt = no 
+  default_md = sha256 
+  x509_extensions = v3_req 
+  distinguished_name = dn 
+  [dn] 
+  C = IN 
+  ST = MAH 
+  L = PUNE 
+  O = JAM 
+  emailAddress = admin@afiyna.com
+  CN = login.afiyan.com 
+  [v3_req] 
+  subjectAltName = @alt_names 
+  [alt_names] 
+  DNS.1 = ig.afiyan.com 
+  DNS.2 = employee.afiyan.com
+  DNS.3 = alpha.afiyan.com
+  DNS.4 = login.afiyan.com 
+EOF
+  ##################JAVA INSTALLATION ############################
+  echo we will not be intalling java
+  sudo apt update -y
+  sudo apt-get install openjdk-17-jdk -y
+  ##################UNZIP INSTALLATION ############################
+  sudo apt install unzip -y
+
+  #### EXTRACT DS BINARIES########################################
+  cp ${download_location}$DS $software_location
+  echo extracting the DS zip file to $install_locaion.......
+  unzip -q $software_location$DS -d $install_locaion
+  ###############installing opendj################################
+  deployment_Secret=$(${install_locaion}opendj/bin/dskeymgr create-deployment-id --deploymentIdPassword $Pass_forgerock) 
+  ${install_locaion}opendj/setup \
+ --deploymentId $deployment_Secret \
+ --deploymentIdPassword $Pass_forgerock \
+ --rootUserDN uid=admin \
+ --rootUserPassword $Pass_forgerock \
+ --monitorUserPassword $Pass_forgerock \
+ --hostname $hostname \
+ --adminConnectorPort $adminPort \
+ --ldapsPort $ldapsPort \
+ --profile am-cts \
+ --instancePath $ldap_instance \
+ --set am-cts/amCtsAdminPassword:$Pass_forgerock \
+ --profile am-config \
+ --set am-config/amConfigAdminPassword:$Pass_forgerock \
+ --profile am-identity-store \
+ --set am-identity-store/amIdentityStoreAdminPassword:$Pass_forgerock \
+ --set am-identity-store/baseDn:$idenityStoreBaseDN \
+ --acceptLicense  >> /app/forgerock/tmp/ldapInstall.log
+  ###############Creating the opendj systemctl file ##################
+  sudo ${install_locaion}opendj/bin/create-rc-script --groupName rahil --userName rahil --systemdService /etc/systemd/system/opendj.service
+  echo starting the ds ......
+  sudo adduser --gecos "" --disabled-password rahil
+  sudo chown -R rahil:rahil /app 
+  sudo systemctl daemon-reload
+  sudo systemctl start opendj
+  sudo systemctl enable opendj
+  ###############Updating host file ##################
+  sudo echo 127.0.0.1 $hostname >> /etc/hosts
+  sudo echo 127.0.0.1 $AM_hostname >> /etc/hosts
+  ###############Extracting the tomcat binaries ##################
+  cp ${download_location}$tomcat  $software_location
+  tar -xf ${software_location}$tomcat -C ${install_locaion}tomcat --strip-components=1
+  ###############Creating the tomcat systemctl file###############
+  cat > /etc/systemd/system/tomcat.service <<EOF
+  [Unit]
+  Description= Apache Tomcat Web Application Container
+  After=network.target
+  [Service]
+  Type=forking
+  User=rahil
+  Group=rahil
+  Environment="JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64"
+  Environment="CATALINA_HOME=${install_locaion}tomcat"
+  Environment="CATALINA_PID=${install_locaion}tomcat/temp/tomcat.pid"
+  Environment="CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC -Djavax.net.ssl.trustStore=${trust_store} -Djavax.net.ssl.trustStorePassword=$Pass_forgerock -Djavax.net.ssl.trustStoreType=jks"
+  ExecStart=${install_locaion}tomcat/bin/startup.sh
+  ExecStop=${install_locaion}tomcat/bin/shutdown.sh
+  [Install]
+  WantedBy=multi-user.target 
+EOF
+  #################Starting tomcat################################
+  chown -R rahil:rahil /app
+  sudo systemctl daemon-reload
+  sudo systemctl start tomcat
+  sudo systemctl enable tomcat
+  #################Exporting the DS certtificate#################
+  sudo echo Exporting DS cert *******************
+  sudo keytool -exportcert -keystore ${ldap_instance}config/keystore -storepass $(cat ${ldap_instance}config/keystore.pin) -alias ssl-key-pair -rfc -file ${tmp_location}ds-cert.pem
+  sudo echo impororting DS cert in tomcat *******************
+  sudo keytool -import -file ${tmp_location}ds-cert.pem -alias ds-cert -keystore ${trust_store} -keypass $Pass_forgerock  -storepass  $Pass_forgerock -noprompt
+  #sudo echo view cert after import  DS cert in tomcat completed *******************
+  #sudo keytool -list -v -keystore  ${trust_store} -storepass $Pass_forgerock -alias ds-cert
+  ####### configuring ssl for tomcat ###################
+  sudo openssl req -x509 -newkey rsa:4096 -keyout ${secret_location}tomcat-key.pem -out ${secret_location}tomcat-cert.pem -days 365 -sha256 -new -config ${secret_location}selfsigned.properties -passout pass:$Pass_forgerock
+  sudo openssl pkcs12 -export -in ${secret_location}tomcat-cert.pem -inkey ${secret_location}tomcat-key.pem -out ${secret_location}tomcat.p12 -name "tomcat"  -passout pass:$Pass_forgerock  -passin pass:$Pass_forgerock
+  sudo systemctl stop tomcat
+  mv ${install_locaion}tomcat/conf/server.xml ${tomcat_backup_location}
+  cp ${download_location}server.xml ${install_locaion}tomcat/conf/server.xml
+  sudo chown -R rahil:rahil /app
+  sudo systemctl start tomcat
+  ############# DEPLOYMENT OF AM FILE ##############################
+  sudo systemctl stop tomcat
+  sudo rm -rf  ${install_locaion}tomcat/webapps/*
+  sudo unzip -qq ${download_location}${AM_binaries} -d ${tmp_location}
+  sudo cp ${tmp_location}openam/${AM_WAR} ${install_locaion}tomcat/webapps/login.war
+  sudo chown -R rahil:rahil /app
+  sudo chown -R rahil:rahil /home/rahil
+  sudo systemctl start tomcat
+  ############# DEPLOYMENT OF CONFIGURATION TOOL ##############################
+  JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64
+  sudo openssl pkcs12 -in ${secret_location}tomcat.p12 -clcerts -nokeys -out  ${tmp_location}tomcat_public_key -passin pass:$Pass_forgerock
+  sudo keytool -import -file ${tmp_location}tomcat_public_key -alias am-cert -keystore ${tmp_location}config.jks -keypass $Pass_forgerock  -storepass  $Pass_forgerock -noprompt
+  sudo keytool -import -file ${tmp_location}ds-cert.pem -alias ds-cert -keystore ${tmp_location}config.jks -keypass $Pass_forgerock  -storepass  $Pass_forgerock -noprompt
+  #sudo cp sudo cp ${tmp_location}openam/${AM_CONFIGURATION_TOOL} ${tools_location}config
+  sudo unzip -qq ${tmp_location}openam/${AM_CONFIGURATION_TOOL} -d ${tools_location}config
+  sudo echo "JAVA_HOME=$JAVA_HOME" >> /etc/environment
+  sudo echo "export JAVA_HOME=$JAVA_HOME" >> /home/vagrant/.bashrc
+  sudo source /etc/environment
+  sudo cp /app/forgerock/download/config.properties ${tools_location}config
+  java -Djavax.net.ssl.trustStore=${tmp_location}config.jks -Djavax.net.ssl.trustStorePassword=$Pass_forgerock -jar ${tools_location}config/${AM_CONFIGURATION_TOOL_JAR} -f ${tools_location}config/config.properties
+  
+SHELL
+end
