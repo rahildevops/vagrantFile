@@ -33,8 +33,18 @@
 6. cp /d/VM/vagrant/forgerock/server.xml  /d/binaries/software/am/
 7. cp /d/VM/vagrant/forgerock/config.properties  /d/binaries/software/am/
 6. vagrant up
-7. open the URL in your local https://login.afiyan.com:8443/login
-8. enter amadmin\SecAuth0
+
+7. login to  AM console
+	a. open the URL in your local https://login.afiyan.com:8443/login
+	b. enter amadmin\SecAuth0
+8. Login to directory server
+	
+	a. Download Apache directory studio.
+	b. connection details
+		ssl is true
+		hostname login.afiayn.com
+		username uid=admin
+		password SecAuth0
 
 ---------------------------------------------------------
 		End of AM Install
