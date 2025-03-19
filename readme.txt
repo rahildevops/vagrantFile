@@ -52,7 +52,7 @@
 5. cd /d/VM/vagrant/forgerockidm
 6. vagrant up
 7. open the URL in your local https://login.afiyan.com/login
-8. enter amadmin\SecAuth0
+8. enter openidm-admin\openidm-admin
 
 ---------------------------------------------------------
 		End one time activity
