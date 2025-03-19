@@ -31,6 +31,28 @@
 	192.168.56.42 login.afiyan.com
 5. cd /d/VM/vagrant/forgerock
 6. vagrant up
+7. open the URL in your local https://login.afiyan.com/login
+8. enter amadmin\SecAuth0
+
+---------------------------------------------------------
+		End of AM Install
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+		Install IDM
+---------------------------------------------------------
+
+1. Download ForgeRock IDM 
+2. mkdir -p /d/binaries/software/idm
+3. copy the idm  /d/binaries/software/am
+4. update your base machine hosts file and add following entry
+	192.168.56.42 login.afiyan.com
+5. cp /d/VM/vagrant/forgerockidm/openidm.service /d/binaries/software/idm
+5. cd /d/VM/vagrant/forgerockidm
+6. vagrant up
+7. open the URL in your local https://login.afiyan.com/login
+8. enter amadmin\SecAuth0
 
 ---------------------------------------------------------
 		End one time activity
