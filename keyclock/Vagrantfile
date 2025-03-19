@@ -159,7 +159,7 @@ sudo systemctl start postgres.service
 
 # Wait for PostgreSQL to initialize before starting Keycloak
 echo "Waiting for PostgreSQL to start..."
-sleep 5
+sleep 20
 sudo docker stop keycloak
 sudo docker rm keycloak 
 sudo /usr/bin/docker run -d \\
