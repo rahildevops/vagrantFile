@@ -49,13 +49,13 @@
 4. update your base machine hosts file and add following entry
 	192.168.56.42 login.afiyan.com
 5. cp /d/VM/vagrant/forgerockidm/openidm.service /d/binaries/software/idm
-5. cd /d/VM/vagrant/forgerockidm
-6. vagrant up
-7. open the URL in your local https://login.afiyan.com/login
+6. cd /d/VM/vagrant/forgerockidm
+7. vagrant up
+8. open the URL in your local https://login.afiyan.com/login
 8. enter openidm-admin\openidm-admin
 
 ---------------------------------------------------------
-		End one time activity
+		End of IDM install
 ---------------------------------------------------------
 
 
