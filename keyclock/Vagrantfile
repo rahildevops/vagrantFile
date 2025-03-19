@@ -167,7 +167,7 @@ sudo /usr/bin/docker run -d \\
  --restart always \\
   -p 8080:8080 \\
   -e KC_DB=postgres \\
-  -e KC_DB_URL=jdbc:postgresql://#{db_hostname_without_domain}:5432/#{db_Name} \\
+  -e KC_DB_URL=jdbc:postgresql://#{keycloak_hostname}:5432/#{db_Name} \\
   -e KC_DB_USERNAME=#{db_username} \\
   -e KC_DB_PASSWORD=#{db_password} \\
   -e KC_HOSTNAME=#{keycloak_hostname} \\
