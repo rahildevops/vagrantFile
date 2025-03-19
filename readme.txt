@@ -1,4 +1,4 @@
-git clone https://github.com/rahildevops/vagrantFile.git
+
 
 install the following on your laptop
 --------------------------------------
@@ -9,16 +9,34 @@ install the following on your laptop
 	choco install vagrant --version=2.4.3 -y
 	choco install git -y
 
-3. make sure to maintain following structure 
-	a. all the files to be placed under D:\VM\vagrant
-	b. software idm = D:\binaries\software\idm
-	d. software  am = D:\binaries\software\am
+3. Make the following directory structure
 
-4. add following into your host file.
+	a. mkdir -p /d/VM /d/binaries/software/idm /d/binaries/software/am
+
+4. move the following 
+        
+	a. mv vagrantFile /d/VM/vagrant
+	b 
+
+
+5. add following into your host file.
 
 	192.168.56.42  ds.afiyan.com  login.afiyan.com
 	192.168.56.82  keycloak.afiyan.com keycloak
 	192.168.56.43  idm.afiyan.com
+
+6. To install idm do the following 
 	
-4. Access URL's
+	a. move your idm binaries to /d/binaries/software/idm
+ 	b. cd /d/VM/vagrant/forgerockidm
+	c. vagrant up
+	c. wait for the VM to start.
+	d. http://idm.afiyan.com:8080/
+	e. openidm-admin\openidm-admin
+	
+5. Access URL's
 	a. idm http://idm.afiyan.com:8080/
+
+
+6. credentials 
+	
