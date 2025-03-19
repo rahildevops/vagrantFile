@@ -13,4 +13,12 @@ install the following on your laptop
 	a. all the files to be placed under D:\VM\vagrant
 	b. software idm = D:\binaries\software\idm
 	d. software  am = D:\binaries\software\am
+
+4. add following into your host file.
+
+	192.168.56.42  ds.afiyan.com  login.afiyan.com
+	192.168.56.82  keycloak.afiyan.com keycloak
+	192.168.56.43  idm.afiyan.com
 	
+4. Access URL's
+	a. idm http://idm.afiyan.com:8080/
