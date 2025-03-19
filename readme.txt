@@ -30,6 +30,8 @@
 4. update your base machine hosts file and add following entry
 	192.168.56.42 login.afiyan.com
 5. cd /d/VM/vagrant/forgerock
+6. cp /d/VM/vagrant/forgerock/server.xml  /d/binaries/software/am/
+7. cp /d/VM/vagrant/forgerock/config.properties  /d/binaries/software/am/
 6. vagrant up
 7. open the URL in your local https://login.afiyan.com/login
 8. enter amadmin\SecAuth0
@@ -50,10 +52,8 @@
 	192.168.56.42 login.afiyan.com
 5. cp /d/VM/vagrant/forgerockidm/openidm.service /d/binaries/software/idm
 6. cd /d/VM/vagrant/forgerockidm
-7. cp /d/VM/vagrant/forgerock/server.xml  /d/binaries/software/am/
-8. cp /d/VM/vagrant/forgerock/config.properties  /d/binaries/software/am/
 7. vagrant up
-8. open the URL in your local https://login.afiyan.com/login
+8. open the URL in your local https://idm.afiyan.com
 8. enter openidm-admin\openidm-admin
 
 ---------------------------------------------------------
