@@ -69,3 +69,21 @@
 ---------------------------------------------------------
 		End of IDM install
 ---------------------------------------------------------
+
+
+
+---------------------------------------------------------
+		Install KeyCLoak
+---------------------------------------------------------
+
+
+1. update your base machine hosts file and add following entry
+	192.168.56.82 keycloak.afiyan.com
+6. cd /d/VM/vagrant/keyclock
+7. vagrant up
+8. open the URL in your local 192.168.56.82:8080
+8. enter admin\SecAuth0
+
+---------------------------------------------------------
+		End of KeyCLoak install
+---------------------------------------------------------
