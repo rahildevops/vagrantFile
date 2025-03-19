@@ -1,3 +1,4 @@
+git clone https://github.com/rahildevops/vagrantFile.git
 download location for git = D:\VM\vagrant
 software location for idm = D:\binaries\software\idm
 software location for am = D:\binaries\software\am
