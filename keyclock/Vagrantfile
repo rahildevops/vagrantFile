@@ -126,36 +126,15 @@ echo \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
-# Create systemd service file for PostgreSQL
-sudo tee /etc/systemd/system/postgres.service > /dev/null <<EOF
-[Unit]
-Description=PostgreSQL Container for Keycloak
-Requires=docker.service
-After=docker.service
-
-[Service]
-Restart=always
-ExecStart=/usr/bin/docker run --rm --name postgres \\
+# install PostgreSQL
+sudo /usr/bin/docker pull postgres:17
+/usr/bin/docker run -d --name postgres --restart always \\
   -e POSTGRES_USER=#{db_username} \\
   -e POSTGRES_PASSWORD=#{db_password} \\
   -e POSTGRES_DB=#{db_Name} \\
   -p 5432:5432 \\
   -v postgres_data:/var/lib/postgresql/data \\
   postgres:17
-ExecStop=/usr/bin/docker stop postgres
-ExecStopPost=/usr/bin/docker rm -f postgres
-
-[Install]
-WantedBy=multi-user.target
-EOF
-
-# Reload systemd to recognize new service files
-sudo systemctl daemon-reload
-
-# Enable and start the services
-sudo systemctl enable postgres.service
-#sudo systemctl enable keycloak.service
-sudo systemctl start postgres.service
 
 # Wait for PostgreSQL to initialize before starting Keycloak
 echo "Waiting for PostgreSQL to start..."
@@ -164,6 +143,7 @@ sudo docker stop keycloak
 sudo docker rm keycloak 
  /usr/bin/docker run -d \\
  --name keycloak \\
+ --restart always \\
   -p 8080:8080 \\
   -e KC_DB=postgres \\
   -e KC_DB_URL=jdbc:postgresql://#{db_hostname_without_domain}:5432/keycloak \\
@@ -173,13 +153,10 @@ sudo docker rm keycloak
   -e KC_HTTP_ENABLED=true \\
  -e KC_BOOTSTRAP_ADMIN_USERNAME=#{keycloak_bootstrap_username} \\
  -e KC_BOOTSTRAP_ADMIN_PASSWORD=#{keycloak_bootstrap_password} \\
- quay.io/keycloak/keycloak:26.1.4 start-dev --verbose
-
+ quay.io/keycloak/keycloak:26.1.4 start-dev 
+ 
  echo completed the keycloak instalation.....................
-#sleep 30
-#sudo docker start  keycloak
-# Verify services are running
-sudo systemctl status postgres.service
+
 sudo apt install postgresql-client -y
 #sudo systemctl status keycloak.service
 
