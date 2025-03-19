@@ -1,0 +1,65 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+    # Define the web01 VM
+    config.vm.define "web01" do |web01|
+      web01.vm.box = "ubuntu/focal64"
+      web01.vm.hostname = "web01"
+      web01.vm.network "private_network", ip: "192.168.56.11"
+  
+      # Provisioning for web01 (optional)
+      web01.vm.provision "shell", inline: <<-SHELL
+        apt-get update
+        apt-get install -y nginx
+        systemctl start nginx
+        systemctl enable nginx
+      SHELL
+    end
+  
+    # Define the web02 VM
+    config.vm.define "web02" do |web02|
+      web02.vm.box = "ubuntu/focal64"
+      web02.vm.hostname = "web02"
+      web02.vm.network "private_network", ip: "192.168.56.12"
+  
+      # Provisioning for web02 (optional)
+      web02.vm.provision "shell", inline: <<-SHELL
+        apt-get update
+        apt-get install -y apache2
+        systemctl start apache2
+        systemctl enable apache2
+      SHELL
+    end
+  
+    # Define the db01 VM
+    config.vm.define "db01" do |db01|
+      db01.vm.box = "centos/7"
+      db01.vm.hostname = "db01"
+      db01.vm.network "private_network", ip: "192.168.56.13"
+  
+      # Provisioning for db01 (install and configure MySQL/MariaDB)
+      db01.vm.provision "shell", inline: <<-SHELL
+        # Update the system
+        sudo yum update -y
+  
+        # Install MariaDB
+        sudo yum install -y mariadb-server
+  
+        # Start and enable MariaDB
+        sudo systemctl start mariadb
+        sudo systemctl enable mariadb
+  
+        # Secure the MariaDB installation
+        sudo mysql_secure_installation <<EOF
+  y
+  SecAuth0
+  SecAuth0
+  y
+  y
+  y
+  y
+EOF
+      SHELL
+    end
+  end

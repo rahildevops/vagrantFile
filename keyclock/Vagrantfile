@@ -1,0 +1,187 @@
+# -- mode: ruby --
+# vi: set ft=ruby :
+# Function to read a properties file and return a hash
+
+def read_properties(file_path)
+  properties = {}
+  File.foreach(file_path) do |line|
+    next if line.strip.empty? || line.start_with?('#') # Skip comments and empty lines
+    key, value = line.strip.split('=', 2)
+    properties[key] = value
+  end
+  properties
+end
+
+# Path to the properties file
+properties_file = File.expand_path("config.properties", __dir__)
+
+# Read the properties file and store the result in the `properties` variable
+properties = read_properties(properties_file)
+
+# Access variables from the properties file
+#Key cloak details
+keycloak_hostname = properties['keycloak_hostname']
+keycloak_bootstrap_username = properties['keycloak_bootstrap_username']
+keycloak_bootstrap_password = properties['keycloak_bootstrap_password']
+#Database details
+db_password = properties['db_password']
+db_Name = properties['db_Name']
+db_username = properties['db_username']
+db_hostname_without_domain = properties['db_hostname_without_domain']
+
+#system details db
+
+
+#system details key cloak
+
+#system details in one VM
+one_system_ip = properties['one_system_ip']
+one_hostname = properties['one_hostname']
+one_memory = properties['one_memory']
+one_CPU = properties['one_CPU']
+
+my_hostname_withoutdomain = properties['my_hostname_withoutdomain']
+
+
+
+# Read the properties file
+properties = read_properties(properties_file)
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://vagrantcloud.com/search.
+  config.vm.box = "ubuntu/focal64"
+
+  # Disable automatic box update checking. If you disable this, then
+  # boxes will only be checked for updates when the user runs
+  # `vagrant box outdated`. This is not recommended.
+  # config.vm.box_check_update = false
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  # NOTE: This will enable public access to the opened port
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine and only allow access
+  # via 127.0.0.1 to disable public access
+  # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+
+  # Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+   config.vm.network "private_network", ip: one_system_ip
+
+  # Create a public network, which generally matched to bridged network.
+  # Bridged networks make the machine appear as another physical device on
+  # your network.
+   config.vm.network "public_network"
+
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+  # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.hostname = one_hostname
+  # Provider-specific configuration so you can fine-tune various
+  # backing providers for Vagrant. These expose provider-specific options.
+  # Example for VirtualBox:
+  #
+   config.vm.provider "virtualbox" do |vb|
+  #   # Display the VirtualBox GUI when booting the machine
+  #   vb.gui = true
+  #
+  #   # Customize the amount of memory on the VM:
+     vb.memory = one_memory
+     vb.cpus = one_CPU
+   end
+  #
+  # View the documentation for the provider you are using for more
+  # information on available options.
+
+  # Enable provisioning with a shell script. Additional provisioners such as
+  # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
+  # documentation for more information about their specific syntax and use.
+   config.vm.provision "shell", inline: <<-SHELL
+   sudo apt-get update
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg -y
+
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+# Create systemd service file for PostgreSQL
+sudo tee /etc/systemd/system/postgres.service > /dev/null <<EOF
+[Unit]
+Description=PostgreSQL Container for Keycloak
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker run --rm --name postgres \\
+  -e POSTGRES_USER=#{db_username} \\
+  -e POSTGRES_PASSWORD=#{db_password} \\
+  -e POSTGRES_DB=#{db_Name} \\
+  -p 5432:5432 \\
+  -v postgres_data:/var/lib/postgresql/data \\
+  postgres:17
+ExecStop=/usr/bin/docker stop postgres
+ExecStopPost=/usr/bin/docker rm -f postgres
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Reload systemd to recognize new service files
+sudo systemctl daemon-reload
+
+# Enable and start the services
+sudo systemctl enable postgres.service
+#sudo systemctl enable keycloak.service
+sudo systemctl start postgres.service
+
+# Wait for PostgreSQL to initialize before starting Keycloak
+echo "Waiting for PostgreSQL to start..."
+sleep 5
+sudo docker stop keycloak
+sudo docker rm keycloak 
+sudo /usr/bin/docker run -d \\
+ --name keycloak \\
+ --restart always \\
+  -p 8080:8080 \\
+  -e KC_DB=postgres \\
+  -e KC_DB_URL=jdbc:postgresql://#{db_hostname_without_domain}:5432/#{db_Name} \\
+  -e KC_DB_USERNAME=#{db_username} \\
+  -e KC_DB_PASSWORD=#{db_password} \\
+  -e KC_HOSTNAME=#{keycloak_hostname} \\
+  -e KC_HTTP_ENABLED=true \\
+ -e KC_BOOTSTRAP_ADMIN_USERNAME=#{keycloak_bootstrap_username} \\
+ -e KC_BOOTSTRAP_ADMIN_PASSWORD=#{keycloak_bootstrap_password}  \\
+ quay.io/keycloak/keycloak:26.1.4 start-dev
+
+ echo completed the keycloak instalation.....................
+#sleep 30
+#sudo docker start  keycloak
+# Verify services are running
+sudo systemctl status postgres.service
+#sudo systemctl status keycloak.service
+
+SHELL
+end
