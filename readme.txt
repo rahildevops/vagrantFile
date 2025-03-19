@@ -1,13 +1,41 @@
 
-
-install the following on your laptop
---------------------------------------
+---------------------------------------------------------
+		Start one time activity
+---------------------------------------------------------
  1. Install chocolatey from the instructions given in the link below 
 	https://chocolatey.org/docs/installation
-2. run the following command on powershell
+ 2. run the following command on powershell
 	choco install virtualbox --version=7.1.4 -y
 	choco install vagrant --version=2.4.3 -y
 	choco install git -y
+
+ 3. git clone https://github.com/rahildevops/vagrantFile.git
+
+ 4. mkdir -p /d/VM
+
+ 5. mv vagrantFile /d/VM/vagrant
+
+---------------------------------------------------------
+		End one time activity
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+		Install AM
+---------------------------------------------------------
+
+1. Download ForgeRock AM and DS
+2. mkdir -p /d/binaries/software/am
+3. copy the AM and DS binaries to  /d/binaries/software/am
+4. update your base machine hosts file and add following entry
+	192.168.56.42 login.afiyan.com
+5. cd /d/VM/vagrant/forgerock
+6. vagrant up
+
+---------------------------------------------------------
+		End one time activity
+---------------------------------------------------------
+
 
 3. Make the following directory structure
 
@@ -15,7 +43,7 @@ install the following on your laptop
 
 4. move the following 
         
-	a. mv vagrantFile /d/VM/vagrant
+	a. 
 	b 
 
 
