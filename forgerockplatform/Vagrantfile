@@ -33,6 +33,8 @@ install_location = properties['install_locaion']
 secret_location = properties['secret_location']
 tmp_location = properties['tmp_location']
 ldap_instance = properties['ldap_instance']
+am_instance = properties['am_instance']
+
 
 
 #Software versions
@@ -47,6 +49,10 @@ DS_Deployment_password = properties['DS_Deployment_password']
 Secret_file = properties['secret_file'] 
 DS_admin_password = properties['DS_admin_password']  
 DS_client_password = properties['DS_client_password']
+am_trust_store = properties['am_trust_store']
+am_trust_store_password = properties['am_trust_store_password']
+
+
 
 #Hostnames
 DS_hostname = properties['DS_hostname']
@@ -159,7 +165,7 @@ Vagrant.configure("2") do |config|
    sudo echo "127.0.0.1    openidm.example.com" | sudo tee -a /etc/hosts
    sudo echo "127.0.0.1    platform.example.com" | sudo tee -a /etc/hosts  
   ##################Creating Directory Structure #################
-  mkdir -p #{install_location}  #{secret_location} #{tmp_location} #{ldap_instance}
+  mkdir -p #{install_location}  #{install_location}tomcat #{secret_location} #{tmp_location} #{ldap_instance} #{am_instance}
 
   ##################Installing Directory Server #################
   #1. Unzip the ds binaries
@@ -167,7 +173,7 @@ Vagrant.configure("2") do |config|
   #2. creating deployment descriptor
   deployment_Secret=$(#{install_location}opendj/bin/dskeymgr create-deployment-id --deploymentIdPassword #{DS_Deployment_password})
   #3. String deployment secret in a file.
-  echo ${deployment_Secret}  > #{secret_location}#{Secret_file}
+  echo deployment_secrert=${deployment_Secret}  >> #{secret_location}#{Secret_file}
   #4. Installing DS Server.
   echo starting to install DS Server !!!!!
   #{install_location}opendj/setup \
@@ -199,8 +205,62 @@ Vagrant.configure("2") do |config|
   sudo chown -R rahil:rahil /app 
   sudo systemctl daemon-reload
   sudo systemctl start opendj
+  echo installation of DS completed succesfully!!!!
+  sudo sleep #{sleep_time_long}
+
+  #6. Creating file to run DS as a service.
+  sudo #{install_location}opendj/bin/create-rc-script --groupName rahil --userName rahil --systemdService /etc/systemd/system/opendj.service
+  echo starting the ds ......
+  sudo adduser --gecos "" --disabled-password rahil
+  sudo chown -R rahil:rahil /app 
+  sudo systemctl daemon-reload
+  sudo systemctl stop opendj
+  sudo sleep #{sleep_time_long}
+  sudo systemctl start opendj
+  sudo systemctl enable opendj
   ##############End of Director Server Installation#################
-  ################################################################
+  ##################################################################
+
+  ##################### Tomcat Installation ########################
+  #1. Extract the tomcat binaries 
+  sudo sleep #{sleep_time_long}
+  tar -xf #{software_folder_server}apache-tomcat-#{tomcat_version}.tar.gz -C #{install_location}tomcat --strip-components=1
+  
+  #2. Creating a trust store for AM and importing the DS certificate to it
+  sudo keytool -exportcert -keystore #{ldap_instance}config/keystore -storepass $(cat #{ldap_instance}config/keystore.pin) -alias ssl-key-pair -rfc -file #{secret_location}ds-cert.pem
+  sudo keytool -import -file #{secret_location}ds-cert.pem -alias ds-cert -keystore #{secret_location}#{am_trust_store} -keypass #{am_trust_store_password}  -storepass  #{am_trust_store_password} -noprompt
+
+  #3. Creating systemctl file for tomcat
+  cat > /etc/systemd/system/tomcat.service <<EOF
+  [Unit]
+  Description= Apache Tomcat Web Application Container
+  After=network.target
+  [Service]
+  Type=forking
+  User=rahil
+  Group=rahil
+  Environment="JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64"
+  Environment="CATALINA_HOME=#{install_location}tomcat"
+  Environment="CATALINA_PID=#{install_location}tomcat/temp/tomcat.pid"
+  Environment="CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC -Djavax.net.ssl.trustStore=#{secret_location}#{am_trust_store} -Djavax.net.ssl.trustStorePassword=#{am_trust_store_password} -Djavax.net.ssl.trustStoreType=jks"
+  ExecStart=#{install_location}tomcat/bin/startup.sh
+  ExecStop=#{install_location}tomcat/bin/shutdown.sh
+  [Install]
+  WantedBy=multi-user.target 
+EOF
+
+  #4. Overidding the server.xml to change port to 8081
+  sudo cp -f #{software_folder_server}/server.xml #{install_location}tomcat/conf/server.xml 
+
+  #5. Start Tomcat 
+  sudo chown -R rahil:rahil /app
+  sudo systemctl daemon-reload
+  sudo systemctl start tomcat
+  sudo systemctl enable tomcat
+  ################### End of Tomcat Installation####################
+  ##################################################################
+
+
 
 
    SHELL
