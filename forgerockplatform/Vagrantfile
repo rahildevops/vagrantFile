@@ -56,16 +56,24 @@ DS_admin_password = properties['DS_admin_password']
 DS_client_password = properties['DS_client_password']
 am_trust_store = properties['am_trust_store']
 am_trust_store_password = properties['am_trust_store_password']
+am_password = properties['am_password']
+
 
 
 
 #Hostnames
 DS_hostname = properties['DS_hostname']
+AM_hostname = properties['AM_hostname']
+
 
 #ldap config details
 Admin_port = properties['Admin_port']
 Ldap_port = properties['Ldap_port']
 Ldaps_port = properties['Ldaps_port']
+
+#AM Configuration
+sub_realm = properties['sub_realm']
+
 
 # Access variables from the properties file
 #server details
@@ -147,6 +155,7 @@ Vagrant.configure("2") do |config|
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
+ 
   ##################JAVA INSTALLATION ############################
   echo we will not be intalling java
   sudo apt update -y
@@ -181,7 +190,7 @@ Vagrant.configure("2") do |config|
   echo deployment_secrert=${deployment_Secret}  >> #{secret_location}#{Secret_file}
   #4. Installing DS Server.
   echo starting to install DS Server !!!!!
-  #{install_location}opendj/setup \
+ #{install_location}opendj/setup \
  --deploymentId $deployment_Secret \
  --deploymentIdPassword #{DS_Deployment_password} \
  --rootUserDN uid=admin \
@@ -225,6 +234,7 @@ Vagrant.configure("2") do |config|
   sudo systemctl enable opendj
 
   #7. Creating tools.properties file 
+  touch /root/.opendj/tools.properties
   cat > /root/.opendj/tools.properties <<EOF
   hostname=ubuntu-jammy
   adminConnectorPort=#{Admin_port}
@@ -291,7 +301,7 @@ EOF
   sudo chown -R rahil:rahil /app
   sudo chown -R rahil:rahil /home/rahil
   sudo systemctl start tomcat
-  sudo sleep 20
+  sudo sleep 10
 
   #3. configuring AM
   sudo unzip -qq #{tmp_location}openam/#{AM_CONFIGURATION_TOOL} -d #{tools_location}config
@@ -302,19 +312,142 @@ EOF
   echo running jar for configuring AM... 
   java -jar #{tools_location}config/#{AM_CONFIGURATION_TOOL_JAR} -f #{tools_location}config/config.properties
 
-
-
   ###################Complete Installation of AM####################
   ##################################################################
-
+  sudo sleep 10
   ###################Configuring AM for Platform ####################
-  #1. Configuring CTS Store
+  sudo apt-get update
+  sudo apt-get install -y jq
+  # 1. Wait for AM to be fully initialized
+  #echo "Waiting for AM to be ready..."
+  #while ! curl -s -o /dev/null -w "%{http_code}" http://#{AM_hostname}:8081/am/json/healthcheck | grep -q "200"; do
+  #  sleep 5
+  #  echo "Waiting for AM to be ready..."
+  #done
 
+  # 2. Log In as an Administrator (from Postman collection)
+  echo "Authenticating as administrator..."
+  ADMIN_TOKEN=$(curl -s -X POST \
+    -H "X-OpenAM-Username: amadmin" \
+    -H "X-OpenAM-Password: #{am_password}" \
+    -H "Accept-API-Version: resource=2.1" \
+    -H "Content-Type: application/json" \
+    http://#{AM_hostname}:8081/am/json/realms/root/authenticate | jq -r '.tokenId')
 
+  if [ -z "$ADMIN_TOKEN" ]; then
+    echo "Failed to authenticate as administrator"
+    exit 1
+  fi
 
-  ###################Complete Configuring of AM####################
-  ##################################################################
+  echo "Admin token*****: $ADMIN_TOKEN"
+  sudo sleep 10
+  # 3. Add CTS External Store (from Postman collection)
+  ################### CTS Configuration ####################
+  echo "Configuring CTS external store..."
+  ################### CTS Configuration ####################
+  
+  # Create a temporary file with the configuration
+  cat > /tmp/cts_config.json <<EOF
+{
+  "amconfig.org.forgerock.services.cts.store.common.section": {
+    "org.forgerock.services.cts.store.location": "external",
+    "org.forgerock.services.cts.store.root.suffix": "ou=famrecords,ou=openam-session,ou=tokens",
+    "org.forgerock.services.cts.store.max.connections": "100",
+    "org.forgerock.services.cts.store.page.size": 0,
+    "org.forgerock.services.cts.store.vlv.page.size": 1000
+  },
+  "amconfig.org.forgerock.services.cts.store.external.section": {
+    "org.forgerock.services.cts.store.ssl.enabled": true,
+    "org.forgerock.services.cts.store.mtls.enabled": false,
+    "org.forgerock.services.cts.store.starttls.enabled": false,
+    "org.forgerock.services.cts.store.directory.name": "#{DS_hostname}:#{Ldaps_port}",
+    "org.forgerock.services.cts.store.loginid": "uid=openam_cts,ou=admins,ou=famrecords,ou=openam-session,ou=tokens",
+    "org.forgerock.services.cts.store.password": "#{DS_client_password}",
+    "org.forgerock.services.cts.store.heartbeat": 0,
+    "org.forgerock.services.cts.store.affinity.enabled": true
+  }
+}
+EOF
 
+  # Apply the configuration
+  HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X PUT \
+    -H "Content-Type: application/json" \
+    -H "Cookie: iplanetDirectoryPro=$ADMIN_TOKEN" \
+    -H "Accept-API-Version: resource=1.0" \
+    -H "If-Match: *" \
+    -d @/tmp/cts_config.json \
+    http://localhost:8081/am/json/global-config/servers/server-default/properties/cts#1.0_update)
 
+  # Verify the response
+  if [ "$HTTP_STATUS" -eq 200 ]; then
+    echo "CTS external store configuration successfully applied"
+    rm -f /tmp/cts_config.json
+  else
+    echo "ERROR: Failed to configure CTS external store (HTTP $HTTP_STATUS)"
+    echo "Check AM logs for details: /app/forgerock/tomcat/logs/amAuthentication.log"
+    echo "Last configuration attempt saved at: /tmp/cts_config.json"
+    exit 1
+  fi
+
+  # 2. Log In as an Administrator (from Postman collection)
+  echo sleep 10
+  echo "Authenticating as administrator..."
+  ADMIN_TOKEN=$(curl -s -X POST \
+    -H "X-OpenAM-Username: amadmin" \
+    -H "X-OpenAM-Password: #{am_password}" \
+    -H "Accept-API-Version: resource=2.1" \
+    -H "Content-Type: application/json" \
+    http://#{AM_hostname}:8081/am/json/realms/root/authenticate | jq -r '.tokenId')
+
+  if [ -z "$ADMIN_TOKEN" ]; then
+    echo "Failed to authenticate as administrator"
+    exit 1
+  fi
+
+  echo "Admin token*****: $ADMIN_TOKEN"
+  ################### Create SubRealm  ####################
+
+ 
+  echo "Creating subrealm '#{sub_realm}'..."
+  
+  # Create JSON payload for realm creation
+  cat > /tmp/create_realm.json <<EOF
+{
+  "name": "#{sub_realm}",
+  "active": true,
+  "parentPath": "/",
+  "aliases": ["#{sub_realm}.example.com"]
+}
+EOF
+
+  REALM_CREATE_URL="http://#{AM_hostname}:8081/am/json/global-config/realms"
+  echo "Creating realm via POST to: $REALM_CREATE_URL"
+  
+  # Execute realm creation (removed _action parameter)
+  HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
+    -H "Content-Type: application/json" \
+    -H "iPlanetDirectoryPro: $ADMIN_TOKEN" \
+    -H "Accept-API-Version: resource=1.0" \
+    -d @/tmp/create_realm.json \
+    "$REALM_CREATE_URL")
+
+  if [ "$HTTP_STATUS" -eq 201 ]; then
+    echo "Subrealm '#{sub_realm}' created successfully"
+    rm -f /tmp/create_realm.json
+  else
+    echo "ERROR: Failed to create subrealm (HTTP $HTTP_STATUS)"
+    echo "Response body:"
+    curl -X POST \
+      -H "Content-Type: application/json" \
+      -H "iPlanetDirectoryPro: $ADMIN_TOKEN" \
+      -H "Accept-API-Version: resource=1.0" \
+      -d @/tmp/create_realm.json \
+      "$REALM_CREATE_URL"
+    exit 1
+  fi
+ ## End of Code till realm creation###
+
+ ####################################################
+## End of AM configuration###
    SHELL
 end
