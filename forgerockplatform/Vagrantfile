@@ -34,6 +34,7 @@ secret_location = properties['secret_location']
 tmp_location = properties['tmp_location']
 ldap_instance = properties['ldap_instance']
 am_instance = properties['am_instance']
+tools_location = properties['tools_location']
 
 
 
@@ -43,6 +44,10 @@ idm_version = properties['idm_version']
 tomcat_version = properties['tomcat_version']
 am_version = properties['am_version']
 ds_version = properties['ds_version']
+JAVA_HOME = properties['JAVA_HOME']
+AM_CONFIGURATION_TOOL = properties['AM_CONFIGURATION_TOOL']
+AM_CONFIGURATION_TOOL_JAR = properties['AM_CONFIGURATION_TOOL_JAR']
+
 
 #Secrets 
 DS_Deployment_password = properties['DS_Deployment_password']
@@ -165,7 +170,7 @@ Vagrant.configure("2") do |config|
    sudo echo "127.0.0.1    openidm.example.com" | sudo tee -a /etc/hosts
    sudo echo "127.0.0.1    platform.example.com" | sudo tee -a /etc/hosts  
   ##################Creating Directory Structure #################
-  mkdir -p #{install_location}  #{install_location}tomcat #{secret_location} #{tmp_location} #{ldap_instance} #{am_instance}
+  mkdir -p  #{tools_location} #{install_location}  #{install_location}tomcat #{secret_location} #{tmp_location} #{ldap_instance} #{am_instance}
 
   ##################Installing Directory Server #################
   #1. Unzip the ds binaries
@@ -218,6 +223,21 @@ Vagrant.configure("2") do |config|
   sudo sleep #{sleep_time_long}
   sudo systemctl start opendj
   sudo systemctl enable opendj
+
+  #7. Creating tools.properties file 
+  cat > /root/.opendj/tools.properties <<EOF
+  hostname=ubuntu-jammy
+  adminConnectorPort=#{Admin_port}
+  ldapcompare.port=#{Ldaps_port}
+  ldapdelete.port=#{Ldaps_port}
+  ldapmodify.port=#{Ldaps_port}
+  ldappasswordmodify.port=#{Ldaps_port}
+  ldapsearch.port=#{Ldaps_port}
+  bindDN=uid=admin
+  bindPassword=#{DS_admin_password}
+  useSsl=true
+  trustAll=true 
+EOF
   ##############End of Director Server Installation#################
   ##################################################################
 
@@ -260,7 +280,40 @@ EOF
   ################### End of Tomcat Installation####################
   ##################################################################
 
+  ###################Installation of AM ############################
+  #1. stopping tomcat and cleanup of websapps folder 
+  sudo systemctl stop tomcat
+  sudo rm -rf  #{install_location}tomcat/webapps/*
 
+  #2. unzip the am war file in the tmp directory and move to webapps folder
+  sudo unzip -qq #{software_folder_server}/AM-#{am_version}.zip -d #{tmp_location}
+  sudo cp #{tmp_location}openam/AM-#{am_version}.war #{install_location}tomcat/webapps/am.war
+  sudo chown -R rahil:rahil /app
+  sudo chown -R rahil:rahil /home/rahil
+  sudo systemctl start tomcat
+  sudo sleep 20
+
+  #3. configuring AM
+  sudo unzip -qq #{tmp_location}openam/#{AM_CONFIGURATION_TOOL} -d #{tools_location}config
+  sudo echo "JAVA_HOME=#{JAVA_HOME}" >> /etc/environment
+  sudo echo "export JAVA_HOME=#{JAVA_HOME}" >> /home/vagrant/.bashrc
+  sudo source /etc/environment
+  sudo cp #{software_folder_server}config.properties #{tools_location}config
+  echo running jar for configuring AM... 
+  java -jar #{tools_location}config/#{AM_CONFIGURATION_TOOL_JAR} -f #{tools_location}config/config.properties
+
+
+
+  ###################Complete Installation of AM####################
+  ##################################################################
+
+  ###################Configuring AM for Platform ####################
+  #1. Configuring CTS Store
+
+
+
+  ###################Complete Configuring of AM####################
+  ##################################################################
 
 
    SHELL
