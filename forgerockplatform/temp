@@ -1,0 +1,42 @@
+################### Create SubRealm  ####################
+ 
+  echo "Creating subrealm '#{sub_realm}'..."
+  
+  # Create JSON payload for realm creation
+  cat > /tmp/create_realm.json <<EOF
+{
+  "name": "#{sub_realm}",
+  "active": true,
+  "parentPath": "/",
+  "aliases": ["#{sub_realm}.example.com"]
+}
+EOF
+
+  REALM_CREATE_URL="http://#{AM_hostname}:8081/am/json/global-config/realms"
+  echo "Creating realm via POST to: $REALM_CREATE_URL"
+  
+  # Execute realm creation (removed _action parameter)
+  HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
+    -H "Content-Type: application/json" \
+    -H "iPlanetDirectoryPro: $ADMIN_TOKEN" \
+    -H "Accept-API-Version: resource=1.0" \
+    -d @/tmp/create_realm.json \
+    "$REALM_CREATE_URL")
+
+  if [ "$HTTP_STATUS" -eq 201 ]; then
+    echo "Subrealm '#{sub_realm}' created successfully"
+    rm -f /tmp/create_realm.json
+  else
+    echo "ERROR: Failed to create subrealm (HTTP $HTTP_STATUS)"
+    echo "Response body:"
+    curl -X POST \
+      -H "Content-Type: application/json" \
+      -H "iPlanetDirectoryPro: $ADMIN_TOKEN" \
+      -H "Accept-API-Version: resource=1.0" \
+      -d @/tmp/create_realm.json \
+      "$REALM_CREATE_URL"
+    exit 1
+  fi
+  SHELL 1
+  fi
+ ## End of Code till realm creation###

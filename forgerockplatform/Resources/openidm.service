@@ -1,0 +1,15 @@
+[Unit]
+Description=ForgeRock OpenIDM
+After=network.target auditd.target
+
+[Service]
+Type=simple
+SuccessExitStatus=143
+Environment="JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64"
+Environment="OPENIDM_OPTS=-Xms4096m -Xmx4096m"
+User=root
+ExecStart=/app/forgerock/install/openidm/startup.sh
+ExecStop=/app/forgerock/install/openidm/shutdown.sh
+
+[Install]
+WantedBy=multi-user.target

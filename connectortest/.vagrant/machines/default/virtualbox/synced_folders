@@ -1,0 +1,1 @@
+{"virtualbox":{"/app/forgerock/download":{"guestpath":"/app/forgerock/download","hostpath":"D:/binaries/software/am","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"D:/VM/vagrant/connectortest","disabled":false,"__vagrantfile":true}}}

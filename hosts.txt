@@ -19,6 +19,8 @@
 # localhost name resolution is handled within DNS itself.
 #	127.0.0.1       localhost
 #	::1             localhost
+
+192.168.56.43  am.afiyan.com
 192.168.70.138 lab.afiyan.com
 192.168.70.132 class.afiyan.com
 192.168.56.42  ds.afiyan.com  login.afiyan.com
