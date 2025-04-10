@@ -303,15 +303,15 @@ EOF
   sudo chown -R rahil:rahil /home/rahil
   sudo systemctl start tomcat
   sudo sleep 10
-
+  sudo echo "*********Completed deploying AM war file, working to configure AM"
   #3. configuring AM
   sudo unzip -qq #{tmp_location}openam/#{AM_CONFIGURATION_TOOL} -d #{tools_location}config
   sudo echo "JAVA_HOME=#{JAVA_HOME}" >> /etc/environment
   sudo echo "export JAVA_HOME=#{JAVA_HOME}" >> /home/vagrant/.bashrc
   sudo source /etc/environment
   sudo cp #{software_folder_server}config.properties #{tools_location}config
-  echo running jar for configuring AM... 
-  java -jar #{tools_location}config/#{AM_CONFIGURATION_TOOL_JAR} -f #{tools_location}config/config.properties
+  sudo echo running jar for configuring AM... 
+  sudo java -jar #{tools_location}config/#{AM_CONFIGURATION_TOOL_JAR} -f #{tools_location}config/config.properties
 
   ###################Complete Installation of AM####################
   ##################################################################
@@ -711,7 +711,7 @@ sudo echo "starting to creating client idm-admin-ui in alpha"
       -H "Referer: http://am.example.com:8081/am/ui-admin/" \
       -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0" \
       -H "X-Requested-With: XMLHttpRequest" \
-      -d '{"coreOAuth2ClientConfig":{"defaultScopes":[],"redirectionUris":["http://openidm.example.com:8080/platform/appAuthHelperRedirect.html","http://openidm.example.com:8080/platform/sessionCheck.html","http://openidm.example.com:8080/admin/appAuthHelperRedirect.html","http://openidm.example.com:8080/admin/sessionCheck.html","http://admin.example.com:8082/appAuthHelperRedirect.html","http://admin.example.com:8082/sessionCheck.html"],"scopes":["openid","fr:idm:*"]}}' \
+      -d '{"coreOAuth2ClientConfig":{"defaultScopes":[],"redirectionUris":["http://openidm.example.com:8080/platform/appAuthHelperRedirect.html","http://openidm.example.com:8080/platform/sessionCheck.html","http://openidm.example.com:8080/admin/appAuthHelperRedirect.html","http://openidm.example.com:8080/admin/sessionCheck.html","http://admin.example.com:8082/appAuthHelperRedirect.html","http://admin.example.com:8082/sessionCheck.html","http://admin.example.com:8080/appAuthHelperRedirect.html","http://admin.example.com:8080/sessionCheck.html"],"scopes":["openid","fr:idm:*"]}}' \
       -o /vagrant/curl_response.json \
       -v 2>> /vagrant/curl_error.log
 
@@ -742,7 +742,7 @@ sudo echo "starting to creating client idm-admin-ui in root"
       -H "Referer: http://am.example.com:8081/am/ui-admin/" \
       -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0" \
       -H "X-Requested-With: XMLHttpRequest" \
-      -d '{"coreOAuth2ClientConfig":{"defaultScopes":[],"redirectionUris":["http://openidm.example.com:8080/platform/appAuthHelperRedirect.html","http://openidm.example.com:8080/platform/sessionCheck.html","http://openidm.example.com:8080/admin/appAuthHelperRedirect.html","http://openidm.example.com:8080/admin/sessionCheck.html","http://admin.example.com:8082/appAuthHelperRedirect.html","http://admin.example.com:8082/sessionCheck.html"],"scopes":["openid","fr:idm:*"]}}' \
+      -d '{"coreOAuth2ClientConfig":{"defaultScopes":[],"redirectionUris":["http://openidm.example.com:8080/platform/appAuthHelperRedirect.html","http://openidm.example.com:8080/platform/sessionCheck.html","http://openidm.example.com:8080/admin/appAuthHelperRedirect.html","http://openidm.example.com:8080/admin/sessionCheck.html","http://admin.example.com:8082/appAuthHelperRedirect.html","http://admin.example.com:8082/sessionCheck.html","http://admin.example.com:8080/appAuthHelperRedirect.html","http://admin.example.com:8080/sessionCheck.html"],"scopes":["openid","fr:idm:*"]}}' \
       -o /vagrant/curl_response.json \
       -v 2>> /vagrant/curl_error.log
 
@@ -1315,14 +1315,14 @@ sudo echo "starting updating cross configuration"
  sudo sed -i 's/^openidm.host=.*/openidm.host=#{idm_hostname}/' #{install_location}openidm/resolver/boot.properties
  sudo export OPENIDM_OPTS="-Xms4096m -Xmx4096m"
  sudo nohup /app/forgerock/install/openidm/startup.sh   > logs/console.out 2>&1&
- sudo sleep 60
+ sudo sleep 180
  sudo /app/forgerock/install/openidm/shutdown.sh  
  sudo cp #{software_folder_server}openidm.service /etc/systemd/system/
  sudo systemctl enable openidm
  sudo systemctl start openidm
- sudo sleep 60
- sudo systemctl stop openidm
-
+ sudo sleep 180
+sudo systemctl stop openidm
+sudo sleep 60
  #2. Configure IDM to trust DS cert
  sudo keytool -import -file #{secret_location}ds-cert.pem -alias ds-cert -keystore #{install_location}openidm/security/truststore  -storepass:file #{install_location}openidm/security/storepass -noprompt
 
@@ -1441,7 +1441,10 @@ sudo echo "starting updating cross configuration"
     #12. replacing  a servletfilter-cors.json
     sudo  cp #{software_folder_server}servletfilter-cors.json  #{install_location}openidm/conf/
     #10. start openidm
+    sudo chmod 777 -R /app/
     sudo systemctl start openidm
+    sudo sleep 180
+    sudo echo "!!!!!!!!!!!!!!!!!!!! Completed AM && IDM configuration !!!!!!!!!!!!!!!!"
  #################################################################### 
    SHELL
 end
