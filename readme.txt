@@ -103,6 +103,8 @@
 	PlatformUI-7.5.1.0610.zip
 2. mkdir -p /d/binaries/software/platform
 
+3.  copy all the software to the folder created
+
 3.  cp /d/vm/vagrant/files-Needed/* /d/binaries/software/platform/
 
 4. make following entry to your system host file
