@@ -448,7 +448,7 @@ EOF
   fi
  ## End of Code till realm creation###
  ## Begning of code to update the scope of ldap to SCOPE_ONE
-
+  sudo echo "starting to update the scope of ldap to SCOPE_ONE"
  ##### Make the HTTP PUT request with proper line continuations
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/services/id-repositories/LDAPv3ForOpenDS/OpenDJ" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -477,7 +477,7 @@ EOF
     # Log completion
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
   ##### Making call to update the search attribute 
-  
+  sudo echo "starting to Making call to update the search attribute"
     # Make the HTTP PUT request
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/services/id-repositories/LDAPv3ForOpenDS/OpenDJ" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -506,6 +506,7 @@ EOF
     # Log completion
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
     ###Delete the ldap from root realm.
+     sudo echo "starting to Delete the ldap from root realm"
     # Make the HTTP DELETE request
     curl -X DELETE "http://am.example.com:8081/am/json/realms/root/realm-config/services/id-repositories/LDAPv3ForOpenDS/OpenDJ" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -535,7 +536,7 @@ EOF
  
 #### creating clients needed for platform setup################
 #### creating client idm-resource-server in root
-
+sudo echo "starting to creating client idm-resource-server in root"
     # Make the HTTP PUT request to create idm-resource-server
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/idm-resource-server" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -566,7 +567,7 @@ EOF
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
 
    ##### creating client idm-provisioning in root
-
+sudo echo "starting to creating client idm-provisioning in root"
     # Make the HTTP PUT request to create idm-resource-server
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/idm-provisioning" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -597,7 +598,7 @@ EOF
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
 
 ##### updating client idm-provisioning in root
-
+sudo echo "starting to updating client idm-provisioning in root"
 
     # Make the HTTP PUT request to create idm-resource-server
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/idm-provisioning" \
@@ -629,7 +630,7 @@ EOF
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
  
     ##### creating client idm-provisioning in alpha
-
+  sudo echo "starting to creating client idm-provisioning in alpha"
     # Make the HTTP PUT request to create idm-resource-server
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-provisioning" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -660,7 +661,7 @@ EOF
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
 
 ##### updating client idm-provisioning in alpha
-
+sudo echo "starting to updating client idm-provisioning in alpha"
 
     # Make the HTTP PUT request to update idm-provision
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-provisioning" \
@@ -693,6 +694,7 @@ EOF
 
 
 ##### creating client idm-admin-ui in alpha
+sudo echo "starting to creating client idm-admin-ui in alpha"
     # Make the HTTP PUT request to create idm-admin-ui
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -723,6 +725,7 @@ EOF
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
   
 ##### creating client idm-admin-ui in root
+sudo echo "starting to creating client idm-admin-ui in root"
     # Make the HTTP PUT request to create idm-admin-ui
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -753,7 +756,7 @@ EOF
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
 
 ##### updating client idm-admin-ui in alpha to public
-
+sudo echo "starting to updating client idm-admin-ui in alpha to public"
     # Make the HTTP PUT request to update idm-admin-ui
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -784,7 +787,7 @@ EOF
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
 
 ##### updating client idm-admin-ui in root to public
-
+sudo echo "starting to updating client idm-admin-ui in root to public"
     # Make the HTTP PUT request to update idm-admin-ui
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -815,7 +818,7 @@ EOF
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
 
 ##### updating client advanced tab in idm-admin-ui for realm alpha
-
+sudo echo "starting updating client advanced tab in idm-admin-ui for realm alpha"
     # Make the HTTP PUT request to update idm-admin-ui
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -846,7 +849,7 @@ EOF
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
 
 ##### updating client advanced tab in idm-admin-ui for realm root
-
+sudo echo "starting updating client advanced tab in idm-admin-ui for realm root "
     # Make the HTTP PUT request to update idm-admin-ui
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -877,6 +880,7 @@ EOF
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
 
 ##### creating client end-user-ui in alpha
+sudo echo "starting creating client end-user-ui in alpha"
     # Make the HTTP PUT request to create OAuth2Client configuration
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -908,6 +912,7 @@ EOF
 
 
 ##### creating client end-user-ui in root
+sudo echo "starting creating client end-user-ui in root"
  curl -X PUT "http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
       -H "Accept-API-Version: protocol=2.0,resource=1.0" \
@@ -937,7 +942,7 @@ EOF
     echo "OAuth2Client 'end-user-ui' creation request completed at $(date)" >> /vagrant/curl_request.log
 
 #### update end-user-ui in alpha
-
+sudo echo "starting update end-user-ui in alpha"
 
     # Make the HTTP PUT request to update end-user-ui OAuth2 client
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui" \
@@ -970,8 +975,7 @@ EOF
 
 
 #### update end-user-ui in root
-
-   
+sudo echo "starting update end-user-ui in root"
      curl -X PUT "http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
       -H "Accept-API-Version: protocol=2.0,resource=1.0" \
@@ -1001,6 +1005,7 @@ EOF
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
 
 #### update end-user-ui in alpha advcanced tab
+sudo echo "starting end-user-ui in alpha advcanced tab"
   # Make the HTTP PUT request to update end-user-ui OAuth2 client
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -1031,7 +1036,7 @@ EOF
     echo "Request completed at $(date)" >> /vagrant/curl_request.log
 
 #### update end-user-ui in root advcanced tab
-
+sudo echo "starting update end-user-ui in root advcanced tab"
  # Make the HTTP PUT request to update end-user-ui OAuth2 client
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -1064,7 +1069,7 @@ EOF
 
 
 #### creating Oauth provider in root realm 
-
+sudo echo "starting creating Oauth provider in root realm "
     # Make the HTTP POST request to create OAuth2 provider
     curl -X POST "http://am.example.com:8081/am/json/realms/root/realm-config/services/oauth-oidc?_action=create" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -1094,6 +1099,7 @@ EOF
     echo "OAuth2 provider creation request completed at $(date)" >> /vagrant/curl_request.log
 
 ##Updating Oauth provider in root realms
+sudo echo "starting Updating Oauth provider in root realms"
     # Make the HTTP PUT request to update OAuth2 provider
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realm-config/services/oauth-oidc" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -1123,7 +1129,7 @@ EOF
     echo "OAuth2 provider update request completed at $(date)" >> /vagrant/curl_request.log
 
 #### creating Oauth provider in aplah realm 
-
+sudo echo "starting Oauth provider in aplah realm"
     # Make the HTTP POST request to create OAuth2 provider
     curl -X POST "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/services/oauth-oidc?_action=create" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -1153,7 +1159,7 @@ EOF
     echo "OAuth2 provider creation request completed at $(date)" >> /vagrant/curl_request.log
 
 #### updating Oauth provider in aplah realm 
-
+sudo echo "starting updating Oauth provider in aplah realm"
  # Make the HTTP PUT request to update OAuth2 provider in alpha realm
     curl -X PUT "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/services/oauth-oidc" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -1183,7 +1189,7 @@ EOF
     echo "OAuth2 provider update request for alpha realm completed at $(date)" >> /vagrant/curl_request.log
 
 #### Configuring IDM provisioning Service 
-
+sudo echo "starting Configuring IDM provisioning Service"
     # Make the HTTP PUT request to update IDM integration service
     curl -X PUT "http://am.example.com:8081/am/json/global-config/services/idm-integration" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -1213,11 +1219,12 @@ EOF
     echo "IDM integration service update request completed at $(date)" >> /vagrant/curl_request.log
 
 ###Creation of validation service
+sudo echo "starting Creation of validation service"
     # Make the HTTP POST request to create Validation Service in alpha realm
     curl -X POST "http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/services/validation?_action=create" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
       -H "Accept-API-Version: protocol=1.0,resource=1.0" \
-okin      -H "Accept-Encoding: gzip, deflate" \
+      -H "Accept-Encoding: gzip, deflate" \
       -H "Accept-Language: en-US" \
       -H "Cache-Control: no-cache" \
       -H "iPlanetDirectoryPro: $ADMIN_TOKEN" \
@@ -1242,6 +1249,7 @@ okin      -H "Accept-Encoding: gzip, deflate" \
     echo "Validation Service creation request for alpha realm completed at $(date)" >> /vagrant/curl_request.log
 
 #####  creating cross configuration
+sudo echo "starting creating cross configuration"
 # Make the HTTP POST request to create CORS Service configuration
     curl -X POST "http://am.example.com:8081/am/json/global-config/services/CorsService/configuration?_action=create" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
@@ -1270,6 +1278,7 @@ okin      -H "Accept-Encoding: gzip, deflate" \
     # Log completion
     echo "CORS Service configuration creation request completed at $(date)" >> /vagrant/curl_request.log
 #####  updating cross configuration
+sudo echo "starting updating cross configuration"
  # Make the HTTP PUT request to update CORS Service configuration
     curl -X PUT "http://am.example.com:8081/am/json/global-config/services/CorsService/configuration/Cors%20Configuration" \
       -H "Accept: application/json, text/javascript, */*; q=0.01" \
