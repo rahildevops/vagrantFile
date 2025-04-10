@@ -87,3 +87,41 @@
 ---------------------------------------------------------
 		End of KeyCLoak install
 ---------------------------------------------------------
+
+
+
+---------------------------------------------------------
+		Install Platform
+---------------------------------------------------------
+
+1. Download ForgeRock software
+	AM-7.5.1.zip
+        apache-tomcat-9.0.102.tar.gz
+	DS-7.5.1.zip
+	IDM-7.5.0.zip
+	PingGateway-2024.11.0.zip
+	PlatformUI-7.5.1.0610.zip
+2. mkdir -p /d/binaries/software/platform
+
+3.  cp /d/vm/vagrant/files-Needed/* /d/binaries/software/platform/
+
+4. make following entry to your system host file
+
+    127.0.0.1    admin.example.com
+    127.0.0.1    am.example.com
+    127.0.0.1    directory.example.com
+    127.0.0.1    enduser.example.com
+    127.0.0.1    login.example.com
+    127.0.0.1    openidm.example.com
+    127.0.0.1    platform.example.com   
+
+5. cd /d/vm/vagrant/forgerockplatform
+
+6. vagrant up
+
+	 
+
+
+---------------------------------------------------------
+		End of Platform install
+---------------------------------------------------------
