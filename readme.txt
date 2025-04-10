@@ -109,13 +109,13 @@
 
 4. make following entry to your system host file
 
-    192.168.56.43   admin.example.com
-    192.168.56.43   am.example.com
-    192.168.56.43   directory.example.com
-    192.168.56.43   enduser.example.com
-    192.168.56.43   login.example.com
-    192.168.56.43   openidm.example.com
-    192.168.56.43   platform.example.com   
+192.168.56.43   admin.example.com
+192.168.56.43   am.example.com
+192.168.56.43   directory.example.com
+192.168.56.43   enduser.example.com
+192.168.56.43   login.example.com
+192.168.56.43   openidm.example.com
+192.168.56.43   platform.example.com   
 
 5. cd /d/vm/vagrant/forgerockplatform
 
