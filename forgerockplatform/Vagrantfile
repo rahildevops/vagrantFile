@@ -1442,6 +1442,7 @@ sudo sleep 60
     sudo  cp #{software_folder_server}servletfilter-cors.json  #{install_location}openidm/conf/
     #10. start openidm
     sudo chmod 777 -R /app/
+    sudo echo "********starting idm after platform setup"
     sudo systemctl start openidm
     sudo sleep 180
     sudo echo "!!!!!!!!!!!!!!!!!!!! Completed AM && IDM configuration !!!!!!!!!!!!!!!!"
