@@ -1,0 +1,29 @@
+#### Configuring IDM provisioning Service 
+sudo echo "starting Configuring IDM provisioning Service"
+    # Make the HTTP PUT request to update IDM integration service
+    curl -X PUT "http://am.example.com:8081/am/json/global-config/services/idm-integration" \
+      -H "Accept: application/json, text/javascript, */*; q=0.01" \
+      -H "Accept-API-Version: protocol=1.0,resource=1.0" \
+      -H "Accept-Encoding: gzip, deflate" \
+      -H "iPlanetDirectoryPro: $ADMIN_TOKEN" \
+      -H "Accept-Language: en-US" \
+      -H "Cache-Control: no-cache" \
+      -H "Connection: keep-alive" \
+      -H "Content-Type: application/json" \
+      -H "Host: am.example.com:8081" \
+      -H "Origin: http://am.example.com:8081" \
+      -H "Referer: http://am.example.com:8081/am/ui-admin/" \
+      -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0" \
+      -H "X-Requested-With: XMLHttpRequest" \
+      -d '{"provisioningClientScopes":["fr:idm:*"],"enabled":true,"idmProvisioningClient":"idm-provisioning","provisioningSigningAlgorithm":"","provisioningSigningKeyAlias":"","provisioningEncryptionMethod":"","useInternalOAuth2Provider":false,"jwtSigningCompatibilityMode":false,"configurationCacheDuration":0,"idmDeploymentUrl":"http://openidm.example.com:8080","provisioningEncryptionAlgorithm":"","provisioningEncryptionKeyAlias":"","idmDeploymentPath":"openidm","_id":"","_type":{"_id":"idm-integration","name":"IdmIntegrationService","collection":false}}' \
+      -o /vagrant/curl_response.json \
+      -v 2>> /vagrant/curl_error.log
+
+    # Check the curl exit status
+    if [ $? -ne 0 ]; then
+      echo "curl request failed. Check /vagrant/curl_error.log for details."
+      exit 1
+    fi
+
+    # Log completion
+    echo "IDM integration service update request completed at $(date)" >> /vagrant/curl_request.log
