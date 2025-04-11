@@ -146,4 +146,5 @@ jq --arg js_code "object.cn || (object.givenName + ' ' + object.sn)" '
     sudo echo "********starting idm after platform setup"
     sudo systemctl start openidm
     /vagrant/scripts/ig/8080_service_start_status.sh
+    /vagrant/scripts/idm/checkPlatformIDMStatus.sh
     sudo echo "!!!!!!!!!!!!!!!!!!!! Completed AM && IDM configuration !!!!!!!!!!!!!!!!"

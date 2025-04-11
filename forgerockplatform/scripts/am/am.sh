@@ -50,7 +50,7 @@ AM_CONFIGURATION_TOOL_JAR=$(get_property "AM_CONFIGURATION_TOOL_JAR" "$PROPERTIE
   sudo unzip -qq ${tmp_location}openam/${AM_CONFIGURATION_TOOL} -d ${tools_location}config
   sudo echo "JAVA_HOME=${JAVA_HOME}" >> /etc/environment
   sudo echo "export JAVA_HOME=${JAVA_HOME}" >> /home/vagrant/.bashrc
-  sudo source /etc/environment
+  source /etc/environment
   sudo cp ${software_folder_server}config.properties ${tools_location}config
   sudo echo running jar for configuring AM... 
   sudo java -jar ${tools_location}config/${AM_CONFIGURATION_TOOL_JAR} -f ${tools_location}config/config.properties

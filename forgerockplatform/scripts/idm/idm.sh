@@ -69,21 +69,21 @@ sudo sed -i "s/^openidm.host=.*/openidm.host=${idm_hostname}/" ${install_locatio
 # Set Java options (without sudo)
 export OPENIDM_OPTS="-Xms4096m -Xmx4096m"
 
-# First run to create configuration
-echo "Initial startup of OpenIDM..."
-sudo nohup ${install_location}/openidm/startup.sh > ${install_location}/logs/console.out 2>&1 &
+# # First run to create configuration
+# echo "Initial startup of OpenIDM..."
+# sudo nohup ${install_location}/openidm/startup.sh > ${install_location}/logs/console.out 2>&1 &
 
-# Wait for initial startup to complete
-echo "Waiting ${sleep_time_very_long} seconds for initial startup..."
-/vagrant/scripts/idm/checkIDMStatus.sh
+# # Wait for initial startup to complete
+# echo "Waiting ${sleep_time_very_long} seconds for initial startup..."
+# /vagrant/scripts/idm/checkIDMStatus.sh
 
 
-# Shutdown the initial instance
-echo "Stopping initial instance..."
-sudo ${install_location}/openidm/shutdown.sh
-
-# Install systemd service
-echo "Setting up systemd service..."
+# # Shutdown the initial instance
+# echo "Stopping initial instance..."
+# sudo ${install_location}/openidm/shutdown.sh
+# /vagrant/scripts/ig/8080_service_stop_status.sh
+# # Install systemd service
+# echo "Setting up systemd service..."
 sudo cp ${software_folder_server}openidm.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable openidm
