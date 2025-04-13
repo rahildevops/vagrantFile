@@ -101,11 +101,14 @@
 	IDM-7.5.0.zip
 	PingGateway-2024.11.0.zip
 	PlatformUI-7.5.1.0610.zip
-2. mkdir -p /d/binaries/software/platform
+	
+2. Copy the file binaries to d drive
 
-3.  copy all the software to the folder created
+3. Copy all the software to the folder created
 
-3.  cp /d/vm/vagrant/files-Needed/* /d/binaries/software/platform/
+4. cp /d/vm/vagrant/files-Needed/* /d/binaries/software/platform/
+
+5. cp -r /d/vm/vagrant/ig-config /d/binaries/software/platform/
 
 4. make following entry to your system host file
 
@@ -115,11 +118,20 @@
 192.168.56.43   enduser.example.com
 192.168.56.43   login.example.com
 192.168.56.43   openidm.example.com
-192.168.56.43   platform.example.com   
+192.168.56.43   platform.example.com  
 
 5. cd /d/vm/vagrant/forgerockplatform
 
 6. vagrant up
+
+7. setting up frodo for local --> user powershell
+frodo conn save `
+  "https://platform.example.com:9443/am" `
+  "Amadmin" `
+  "SecAuth0" `
+  --idm-host "https://platform.example.com:9443/openidm" `
+  --insecure `
+  --no-validate
 
 	 
 
