@@ -157,10 +157,10 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   # config.vm.provision "shell", inline: <<-SHELL
    #SHELL
-    config.vm.provision "shell", path: "scripts/prequisite/prequisite.sh"
-    config.vm.provision "shell", path: "scripts/ds/ds.sh"
-    config.vm.provision "shell", path: "scripts/am/tomcat.sh"
-    config.vm.provision "shell", path: "scripts/am/am.sh"
+    # config.vm.provision "shell", path: "scripts/prequisite/prequisite.sh"
+    # config.vm.provision "shell", path: "scripts/ds/ds.sh"
+    # config.vm.provision "shell", path: "scripts/am/tomcat.sh"
+    # config.vm.provision "shell", path: "scripts/am/am.sh"
     config.vm.provision "shell", path: "scripts/idm/idm.sh"
     config.vm.provision "shell", path: "scripts/ig/ig.sh"
 
