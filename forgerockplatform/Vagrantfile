@@ -157,99 +157,99 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   # config.vm.provision "shell", inline: <<-SHELL
    #SHELL
-    config.vm.provision "shell", path: "scripts/prequisite/prequisite.sh"
-    config.vm.provision "shell", path: "scripts/ds/ds.sh"
-    config.vm.provision "shell", path: "scripts/am/tomcat.sh"
-    config.vm.provision "shell", path: "scripts/am/am.sh"
-    config.vm.provision "shell", path: "scripts/idm/idm.sh"
-    config.vm.provision "shell", path: "scripts/ig/ig.sh"
+    # config.vm.provision "shell", path: "scripts/prequisite/prequisite.sh"
+    # config.vm.provision "shell", path: "scripts/ds/ds.sh"
+    # config.vm.provision "shell", path: "scripts/am/tomcat.sh"
+    # config.vm.provision "shell", path: "scripts/am/am.sh"
+    # config.vm.provision "shell", path: "scripts/idm/idm.sh"
+    # config.vm.provision "shell", path: "scripts/ig/ig.sh"
 
   config.vm.provision "shell", inline: <<-SHELL
-     # Source the first script that gets the token
-    . /vagrant/scripts/am/AM-platform/login.sh
+    #  # Source the first script that gets the token
+    # . /vagrant/scripts/am/AM-platform/login.sh
      
-     # Add external CTS store 
-     /vagrant/scripts/am/AM-platform/system/AddCTS.sh
+    #  # Add external CTS store 
+    #  /vagrant/scripts/am/AM-platform/system/AddCTS.sh
 
-     #Authenticate after changing CTS store.
-     . /vagrant/scripts/am/AM-platform/login.sh
+    #  #Authenticate after changing CTS store.
+    #  . /vagrant/scripts/am/AM-platform/login.sh
 
-     #Create Alpha realm
-     /vagrant/scripts/am/AM-platform/system/createAlphaRealm.sh
+    #  #Create Alpha realm
+    #  /vagrant/scripts/am/AM-platform/system/createAlphaRealm.sh
 
-     #Update scope for ds store in sub realm
-     /vagrant/scripts/am/AM-platform/system/DS_set_SCOPE_ONE.sh
+    #  #Update scope for ds store in sub realm
+    #  /vagrant/scripts/am/AM-platform/system/DS_set_SCOPE_ONE.sh
 
-     #Update scope for ds store in sub realm
-     /vagrant/scripts/am/AM-platform/system/ds-update-seach.sh
+    #  #Update scope for ds store in sub realm
+    #  /vagrant/scripts/am/AM-platform/system/ds-update-seach.sh
      
-     #ds delete in root realm
-     /vagrant/scripts/am/AM-platform/system/ds-delete-root.sh
+    #  #ds delete in root realm
+    #  /vagrant/scripts/am/AM-platform/system/ds-delete-root.sh
      
-     ## Create clients in root   
-     /vagrant/scripts/am/AM-platform/Oauth/create/root/idm-resource-server.sh
-     /vagrant/scripts/am/AM-platform/Oauth/create/root/idm-provisioning.sh
-     /vagrant/scripts/am/AM-platform/Oauth/create/root/idm-admin-ui.sh
-     /vagrant/scripts/am/AM-platform/Oauth/create/root/end-user-ui.sh
+    #  ## Create clients in root   
+    #  /vagrant/scripts/am/AM-platform/Oauth/create/root/idm-resource-server.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/create/root/idm-provisioning.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/create/root/idm-admin-ui.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/create/root/end-user-ui.sh
 
-     ## Create clients in alpha
-     /vagrant/scripts/am/AM-platform/Oauth/create/alpha/idm-provisioning.sh
-     /vagrant/scripts/am/AM-platform/Oauth/create/alpha/idm-admin-ui.sh
-     /vagrant/scripts/am/AM-platform/Oauth/create/alpha/end-user-ui.sh
+    #  ## Create clients in alpha
+    #  /vagrant/scripts/am/AM-platform/Oauth/create/alpha/idm-provisioning.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/create/alpha/idm-admin-ui.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/create/alpha/end-user-ui.sh
 
-     ## update clients in alpha
-     /vagrant/scripts/am/AM-platform/Oauth/update/alpha/idm-provisioning.sh
-     /vagrant/scripts/am/AM-platform/Oauth/update/alpha/idm-admin-ui-Public.sh
-     /vagrant/scripts/am/AM-platform/Oauth/update/alpha/idm-admin-ui-Implicit.sh
-     /vagrant/scripts/am/AM-platform/Oauth/update/alpha/end-user-ui-pub.sh
-     /vagrant/scripts/am/AM-platform/Oauth/update/alpha/end-user-ui-adv.sh
+    #  ## update clients in alpha
+    #  /vagrant/scripts/am/AM-platform/Oauth/update/alpha/idm-provisioning.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/update/alpha/idm-admin-ui-Public.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/update/alpha/idm-admin-ui-Implicit.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/update/alpha/end-user-ui-pub.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/update/alpha/end-user-ui-adv.sh
 
-     #update client in root
-     /vagrant/scripts/am/AM-platform/Oauth/update/root/idm-provisioning.sh
-     /vagrant/scripts/am/AM-platform/Oauth/update/root/idm-admin-ui-Public.sh
-     /vagrant/scripts/am/AM-platform/Oauth/update/root/idm-admin-ui-Implicit.sh
-     /vagrant/scripts/am/AM-platform/Oauth/update/root/end-user-ui-pub.sh
-     /vagrant/scripts/am/AM-platform/Oauth/update/root/end-user-ui-adv.sh
+    #  #update client in root
+    #  /vagrant/scripts/am/AM-platform/Oauth/update/root/idm-provisioning.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/update/root/idm-admin-ui-Public.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/update/root/idm-admin-ui-Implicit.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/update/root/end-user-ui-pub.sh
+    #  /vagrant/scripts/am/AM-platform/Oauth/update/root/end-user-ui-adv.sh
 
 
-     ##Creating services in root realm
-     /vagrant/scripts/am/AM-platform/services/root/create/providers.sh
+    #  ##Creating services in root realm
+    #  /vagrant/scripts/am/AM-platform/services/root/create/providers.sh
 
-     ##Creating services in alpha realm
-     /vagrant/scripts/am/AM-platform/services/alpha/create/providers.sh
-     /vagrant/scripts/am/AM-platform/services/alpha/create/validationService.sh
+    #  ##Creating services in alpha realm
+    #  /vagrant/scripts/am/AM-platform/services/alpha/create/providers.sh
+    #  /vagrant/scripts/am/AM-platform/services/alpha/create/validationService.sh
 
-     ##Updating services in root realm
-     /vagrant/scripts/am/AM-platform/services/root/update/providers.sh
+    #  ##Updating services in root realm
+    #  /vagrant/scripts/am/AM-platform/services/root/update/providers.sh
 
-     ##Updating services in alpha realm
-     /vagrant/scripts/am/AM-platform/services/alpha/update/providers.sh
+    #  ##Updating services in alpha realm
+    #  /vagrant/scripts/am/AM-platform/services/alpha/update/providers.sh
 
-     ##AM System settings
-     /vagrant/scripts/am/AM-platform/system/IDMprovisioning.sh
-     /vagrant/scripts/am/AM-platform/system/createCross.sh
-     /vagrant/scripts/am/AM-platform/system/updateCross.sh
+    #  ##AM System settings
+    #  /vagrant/scripts/am/AM-platform/system/IDMprovisioning.sh
+    #  /vagrant/scripts/am/AM-platform/system/createCross.sh
+    #  /vagrant/scripts/am/AM-platform/system/updateCross.sh
      
-     ##Configuring IDM for Platform Setup
-     /vagrant/scripts/idm/checkIDMStatus.sh
-    /vagrant/scripts/idm/idmPlatformConf.sh
+    #  ##Configuring IDM for Platform Setup
+    #  /vagrant/scripts/idm/checkIDMStatus.sh
+    # /vagrant/scripts/idm/idmPlatformConf.sh
 
-    #Confgiuring IG for Platform
-    /vagrant/scripts/ig/add_route.sh
-    . /vagrant/scripts/am/AM-platform/login.sh
-    /vagrant/scripts/am/AM-platform/Oauth/update/alpha/end-user-ui-platform.sh
-    /vagrant/scripts/am/AM-platform/Oauth/update/root/end-user-ui-platform.sh
-    /vagrant/scripts/am/AM-platform/Oauth/update/alpha/idm-admin-ui-platform.sh
-    /vagrant/scripts/am/AM-platform/Oauth/update/root/idm-admin-ui-platform.sh
-    /vagrant/scripts/am/AM-platform/services/root/update/ExternalLoginPageURL.sh
-    /vagrant/scripts/am/AM-platform/services/alpha/update/ExternalLoginPageURL.sh
-    /vagrant/scripts/am/AM-platform/services/root/create/validationService.sh
-    /vagrant/scripts/am/AM-platform/services/root/create/BaseURLSource.sh
-    /vagrant/scripts/am/AM-platform/services/alpha/create/BaseURLSource.sh
-    /vagrant/scripts/am/AM-platform/services/root/update/BaseURLSource.sh
-    /vagrant/scripts/am/AM-platform/services/alpha/update/BaseURLSource.sh
-    /vagrant/scripts/am/AM-platform/services/alpha/update/validationService.sh
-    /vagrant/scripts/idm/update-ui-configuration_platform.sh
+    # #Confgiuring IG for Platform
+    # /vagrant/scripts/ig/add_route.sh
+    # . /vagrant/scripts/am/AM-platform/login.sh
+    # /vagrant/scripts/am/AM-platform/Oauth/update/alpha/end-user-ui-platform.sh
+    # /vagrant/scripts/am/AM-platform/Oauth/update/root/end-user-ui-platform.sh
+    # /vagrant/scripts/am/AM-platform/Oauth/update/alpha/idm-admin-ui-platform.sh
+    # /vagrant/scripts/am/AM-platform/Oauth/update/root/idm-admin-ui-platform.sh
+    # /vagrant/scripts/am/AM-platform/services/root/update/ExternalLoginPageURL.sh
+    # /vagrant/scripts/am/AM-platform/services/alpha/update/ExternalLoginPageURL.sh
+    # /vagrant/scripts/am/AM-platform/services/root/create/validationService.sh
+    # /vagrant/scripts/am/AM-platform/services/root/create/BaseURLSource.sh
+    # /vagrant/scripts/am/AM-platform/services/alpha/create/BaseURLSource.sh
+    # /vagrant/scripts/am/AM-platform/services/root/update/BaseURLSource.sh
+    # /vagrant/scripts/am/AM-platform/services/alpha/update/BaseURLSource.sh
+    # /vagrant/scripts/am/AM-platform/services/alpha/update/validationService.sh
+    # /vagrant/scripts/idm/update-ui-configuration_platform.sh
     /vagrant/scripts/platform/docker.sh
  
    SHELL

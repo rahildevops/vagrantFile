@@ -42,9 +42,21 @@ ADMIN_CLIENT_ID=idm-admin-ui
 THEME=default
 PLATFORM_UI_LOCALE=en 
 EOF
-# Run containers in detached mode (-d) instead of interactive (-it)
-sudo /usr/bin/docker run -d --rm -p 8083:8080 --env-file=/app/platform_env gcr.io/forgerock-io/platform-login-ui:7.5.0
-sudo /usr/bin/docker run -d --rm -p 8082:8080 --env-file=/app/platform_env gcr.io/forgerock-io/platform-admin-ui:7.5.0
-sudo /usr/bin/docker run -d --rm -p 8888:8080 --env-file=/app/platform_env gcr.io/forgerock-io/platform-enduser-ui:7.5.0
+
+# Run containers with auto-restart policy
+sudo docker run -d --restart unless-stopped -p 8083:8080 --env-file=/app/platform_env gcr.io/forgerock-io/platform-login-ui:7.5.0
+sudo docker run -d --restart unless-stopped -p 8082:8080 --env-file=/app/platform_env gcr.io/forgerock-io/platform-admin-ui:7.5.0
+sudo docker run -d --restart unless-stopped -p 8888:8080 --env-file=/app/platform_env gcr.io/forgerock-io/platform-enduser-ui:7.5.0
+
+# # Run containers in detached mode (-d) instead of interactive (-it)
+# sudo /usr/bin/docker run -d --rm -p 8083:8080 --env-file=/app/platform_env gcr.io/forgerock-io/platform-login-ui:7.5.0
+# sudo /usr/bin/docker run -d --rm -p 8082:8080 --env-file=/app/platform_env gcr.io/forgerock-io/platform-admin-ui:7.5.0
+# sudo /usr/bin/docker run -d --rm -p 8888:8080 --env-file=/app/platform_env gcr.io/forgerock-io/platform-enduser-ui:7.5.0
+
+
+# # Run containers in detached mode (-d) instead of interactive (-it)
+# sudo /usr/bin/docker run -d --rm -p 8083:8080 --env-file=/app/platform_env gcr.io/forgerock-io/platform-login-ui:7.5.0
+# sudo /usr/bin/docker run -d --rm -p 8082:8080 --env-file=/app/platform_env gcr.io/forgerock-io/platform-admin-ui:7.5.0
+# sudo /usr/bin/docker run -d --rm -p 8888:8080 --env-file=/app/platform_env gcr.io/forgerock-io/platform-enduser-ui:7.5.0
 
 echo "************** Docker containers started successfully ********************"
