@@ -96,13 +96,13 @@
 
 1. Download ForgeRock software
 	AM-7.5.1.zip
-        apache-tomcat-9.0.102.tar.gz
+    apache-tomcat-9.0.102.tar.gz
 	DS-7.5.1.zip
 	IDM-7.5.0.zip
 	PingGateway-2024.11.0.zip
 	PlatformUI-7.5.1.0610.zip
 	
-2. Copy the file binaries to d drive
+2. Copy the binaries folder to d drive
 
 3. Copy all the software to the folder D:\binaries\software\platform
 
@@ -110,7 +110,11 @@
 
 5. cp -r /d/vm/vagrant/ig-config /d/binaries/software/platform/
 
-4. make following entry to your system host file
+6. mkdir /d/VM/vagrant-config and add it you environment variable
+
+6. mkdir /d/VM/Vamware and update in your VM-box setting file-> preferences --> add the location
+
+7. make following entry to your system host file
 
 192.168.56.43   admin.example.com
 192.168.56.43   am.example.com
@@ -120,11 +124,14 @@
 192.168.56.43   openidm.example.com
 192.168.56.43   platform.example.com  
 
-5. cd /d/vm/vagrant/forgerockplatform
+8. cd /d/vm/vagrant/forgerockplatform
 
-6. vagrant up
+9. vagrant up
 
-7. setting up frodo for local --> user powershell
+
+Not needed 
+
+10. setting up frodo for local --> user powershell
 frodo conn save `
   "https://platform.example.com:9443/am" `
   "Amadmin" `
