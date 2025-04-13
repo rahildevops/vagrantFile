@@ -106,11 +106,7 @@
 
 3. Copy all the software to the folder D:\binaries\software\platform
 
-4. cp /d/vm/vagrant/files-Needed/* /d/binaries/software/platform/
-
-5. cp -r /d/vm/vagrant/ig-config /d/binaries/software/platform/
-
-6. mkdir /d/VM/vagrant-config and add it you environment variable
+6. mkdir /d/VM/vagrant-config and add it you environment variable VAGRANT_HOME=/d/VM/vagrant-config
 
 6. mkdir /d/VM/Vamware and update in your VM-box setting file-> preferences --> add the location
 
@@ -128,6 +124,12 @@
 
 9. vagrant up
 
+
+10. Once installation is completed wait for 5 minutes open the link in the browser
+https://platform.example.com:9443/
+click on admin access
+login with following 
+amAdmin\SecAuth0
 
 Not needed 
 
