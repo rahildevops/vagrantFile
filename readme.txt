@@ -104,7 +104,7 @@
 	
 2. Copy the file binaries to d drive
 
-3. Copy all the software to the folder created
+3. Copy all the software to the folder D:\binaries\software\platform
 
 4. cp /d/vm/vagrant/files-Needed/* /d/binaries/software/platform/
 
