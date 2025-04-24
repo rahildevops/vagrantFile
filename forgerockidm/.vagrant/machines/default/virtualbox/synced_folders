@@ -1,1 +1,0 @@
-{"virtualbox":{"/app/forgerock/download":{"guestpath":"/app/forgerock/download","hostpath":"D:/binaries/software/idm","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"D:/VM/vagrant/forgerockidm","disabled":false,"__vagrantfile":true}}}

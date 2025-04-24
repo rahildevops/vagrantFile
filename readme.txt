@@ -24,14 +24,13 @@
 		Install AM
 ---------------------------------------------------------
 
-1. Download ForgeRock AM and DS
+1. Download ForgeRock AM and DS --> Uploaded on shared drive
+2. open git bash
 2. mkdir -p /d/binaries/software/am
-3. copy the AM and DS binaries to  /d/binaries/software/am
+3. copy the AM, DS and other files downloaded to  /d/binaries/software/am
 4. update your base machine hosts file and add following entry
 	192.168.56.42 login.afiyan.com
 5. cd /d/VM/vagrant/forgerock
-6. cp /d/VM/vagrant/forgerock/server.xml  /d/binaries/software/am/
-7. cp /d/VM/vagrant/forgerock/config.properties  /d/binaries/software/am/
 6. vagrant up
 
 7. login to  AM console

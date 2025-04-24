@@ -30988,3 +30988,3347 @@ Note: Unnecessary use of -X or --request, POST is already inferred.
 { [172 bytes data]
 100   368  100   172  100   196   1388   1582 --:--:-- --:--:-- --:--:--  2991
 * Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/services/id-repositories/LDAPv3ForOpenDS/OpenDJ HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5149
+> 
+} [5149 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1521421859"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5117
+< Date: Sun, 13 Apr 2025 07:39:15 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5117 bytes data]
+100 10266  100  5117  100  5149  14729  14821 --:--:-- --:--:-- --:--:-- 29585
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/services/id-repositories/LDAPv3ForOpenDS/OpenDJ HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5058
+> 
+} [5058 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1521421859"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5117
+< Date: Sun, 13 Apr 2025 07:39:16 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5117 bytes data]
+100 10175  100  5117  100  5058  14241  14076 --:--:-- --:--:-- --:--:-- 28263100 10175  100  5117  100  5058  14004  13842 --:--:-- --:--:-- --:--:-- 27800
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> DELETE /am/json/realms/root/realm-config/services/id-repositories/LDAPv3ForOpenDS/OpenDJ HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-587360145"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5110
+< Date: Sun, 13 Apr 2025 07:39:16 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5110 bytes data]
+100  5110  100  5110    0     0  15581      0 --:--:-- --:--:-- --:--:-- 15626
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-resource-server HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 169
+> 
+} [169 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1913746122"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/idm-resource-server
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5585
+< Date: Sun, 13 Apr 2025 07:39:17 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5585 bytes data]
+100  5754  100  5585  100   169  14020    424 --:--:-- --:--:-- --:--:-- 14457
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-provisioning HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 115
+> 
+} [115 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "988155673"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/idm-provisioning
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5528
+< Date: Sun, 13 Apr 2025 07:39:17 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5528 bytes data]
+100  5643  100  5528  100   115  30912    643 --:--:-- --:--:-- --:--:-- 31525
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 572
+> 
+} [572 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-462701502"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5987
+< Date: Sun, 13 Apr 2025 07:39:17 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5987 bytes data]
+100  6559  100  5987  100   572  41999   4012 --:--:-- --:--:-- --:--:-- 46190
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 211
+> 
+} [211 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1751896439"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5626
+< Date: Sun, 13 Apr 2025 07:39:17 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5626 bytes data]
+100  5837  100  5626  100   211  35061   1314 --:--:-- --:--:-- --:--:-- 36481
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-provisioning HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 115
+> 
+} [115 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "988155673"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-provisioning
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5528
+< Date: Sun, 13 Apr 2025 07:39:18 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5528 bytes data]
+100  5643  100  5528  100   115  24184    503 --:--:-- --:--:-- --:--:-- 24750
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 572
+> 
+} [572 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-462701502"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5987
+< Date: Sun, 13 Apr 2025 07:39:18 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5987 bytes data]
+100  6559  100  5987  100   572  45899   4385 --:--:-- --:--:-- --:--:-- 50068100  6559  100  5987  100   572  42399   4050 --:--:-- --:--:-- --:--:-- 46190
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 211
+> 
+} [211 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1751896439"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5626
+< Date: Sun, 13 Apr 2025 07:39:18 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5626 bytes data]
+100  5837  100  5626  100   211  38707   1451 --:--:-- --:--:-- --:--:-- 40255
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-provisioning HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5536
+> 
+} [5536 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-2109559664"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5582
+< Date: Sun, 13 Apr 2025 07:39:18 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5582 bytes data]
+100 11118  100  5582  100  5536  17228  17086 --:--:-- --:--:-- --:--:-- 34421
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5879
+> 
+} [5879 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-2146567581"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5904
+< Date: Sun, 13 Apr 2025 07:39:19 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5904 bytes data]
+100 11783  100  5904  100  5879  28911  28789 --:--:-- --:--:-- --:--:-- 57759
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5891
+> 
+} [5891 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1772295802"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5920
+< Date: Sun, 13 Apr 2025 07:39:19 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5920 bytes data]
+100 11811  100  5920  100  5891  32589  32429 --:--:-- --:--:-- --:--:-- 65254
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5626
+> 
+} [5626 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1551081727"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5650
+< Date: Sun, 13 Apr 2025 07:39:19 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5650 bytes data]
+100 11276  100  5650  100  5626  24663  24558 --:--:-- --:--:-- --:--:-- 49456
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5638
+> 
+} [5638 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-155413966"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5666
+< Date: Sun, 13 Apr 2025 07:39:20 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5666 bytes data]
+100 11304  100  5666  100  5638  26955  26822 --:--:-- --:--:-- --:--:-- 54086
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-provisioning HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5536
+> 
+} [5536 bytes data]
+100  5536    0     0  100  5536      0  23846 --:--:-- --:--:-- --:--:-- 23862* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-2109559664"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5582
+< Date: Sun, 13 Apr 2025 07:39:20 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5582 bytes data]
+100 11118  100  5582  100  5536  20640  20470 --:--:-- --:--:-- --:--:-- 41025
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5879
+> 
+} [5879 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-2146567581"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5904
+< Date: Sun, 13 Apr 2025 07:39:20 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5904 bytes data]
+100 11783  100  5904  100  5879  26944  26830 --:--:-- --:--:-- --:--:-- 54050
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5891
+> 
+} [5891 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1772295802"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5920
+< Date: Sun, 13 Apr 2025 07:39:20 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5920 bytes data]
+100 11811  100  5920  100  5891  31152  31000 --:--:-- --:--:-- --:--:-- 62492
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5626
+> 
+} [5626 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1551081727"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5650
+< Date: Sun, 13 Apr 2025 07:39:21 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5650 bytes data]
+100 11276  100  5650  100  5626  25614  25505 --:--:-- --:--:-- --:--:-- 51254
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5638
+> 
+} [5638 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-155413966"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5666
+< Date: Sun, 13 Apr 2025 07:39:21 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5666 bytes data]
+100 11304  100  5666  100  5638  26474  26343 --:--:-- --:--:-- --:--:-- 53070
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/realms/root/realm-config/services/oauth-oidc?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 320
+> 
+} [320 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1078680552"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Transfer-Encoding: chunked
+< Date: Sun, 13 Apr 2025 07:39:21 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [7684 bytes data]
+100  8763    0  8443  100   320  27406   1038 --:--:-- --:--:-- --:--:-- 28543
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/realms/root/realms/alpha/realm-config/services/oauth-oidc?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 256
+> 
+} [256 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1280899799"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Transfer-Encoding: chunked
+< Date: Sun, 13 Apr 2025 07:39:22 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [7685 bytes data]
+100  8635    0  8379  100   256  35512   1085 --:--:-- --:--:-- --:--:-- 36744
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/realms/root/realms/alpha/realm-config/services/validation?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 241
+> 
+} [241 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1683102482"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 326
+< Date: Sun, 13 Apr 2025 07:39:22 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [326 bytes data]
+100   567  100   326  100   241   1519   1122 --:--:-- --:--:-- --:--:--  2649
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/services/oauth-oidc HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 8504
+> 
+} [8504 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "162072837"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Transfer-Encoding: chunked
+< Date: Sun, 13 Apr 2025 07:39:22 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [7686 bytes data]
+100 16981    0  8477  100  8504  50378  50539 --:--:-- --:--:-- --:--:--   98k
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/services/oauth-oidc HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 8440
+> 
+} [8440 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1773314108"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Transfer-Encoding: chunked
+< Date: Sun, 13 Apr 2025 07:39:22 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [7684 bytes data]
+100 16853    0  8413  100  8440  47956  48110 --:--:-- --:--:-- --:--:-- 96856
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/global-config/services/idm-integration HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 550
+> 
+} [550 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "481030720"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 371
+< Date: Sun, 13 Apr 2025 07:39:23 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [371 bytes data]
+100   921  100   371  100   550   2757   4088 --:--:-- --:--:-- --:--:--  6873
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/global-config/services/CorsService/configuration?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 591
+> 
+} [591 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1531044641"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/global-config/services/CorsService/configuration/Cors Configuration
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 721
+< Date: Sun, 13 Apr 2025 07:39:23 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [721 bytes data]
+100  1312  100   721  100   591   2326   1907 --:--:-- --:--:-- --:--:--  4232
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/global-config/services/CorsService/configuration/Cors%20Configuration HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: lrtLNeIlaYVkjJSPW6vkehrlse4.*AAJTSQACMDEAAlNLABxhNXNNZlduV1FIY1Z4R0h5M09OYndaYlZtNUE9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 721
+> 
+} [721 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1531044201"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 721
+< Date: Sun, 13 Apr 2025 07:39:23 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [721 bytes data]
+100  1442  100   721  100   721   3885   3885 --:--:-- --:--:-- --:--:--  7794
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> iPlanetDirectoryPro: LhduLxz0k7MbfJ4M1YopIedoNtE.*AAJTSQACMDEAAlNLABxmV0hTNTJqWWd1ZmtaTmpqNEE3Mmh0VVQ5Z3c9AAR0eXBlAANDVFMAAlMxAAA.*
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5760
+> 
+} [5760 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1771084098"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5785
+< Date: Sun, 13 Apr 2025 07:41:10 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5785 bytes data]
+100 11545  100  5785  100  5760  23344  23243 --:--:-- --:--:-- --:--:-- 46930
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> iPlanetDirectoryPro: LhduLxz0k7MbfJ4M1YopIedoNtE.*AAJTSQACMDEAAlNLABxmV0hTNTJqWWd1ZmtaTmpqNEE3Mmh0VVQ5Z3c9AAR0eXBlAANDVFMAAlMxAAA.*
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5760
+> 
+} [5760 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1771084098"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5785
+< Date: Sun, 13 Apr 2025 07:41:11 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5785 bytes data]
+100 11545  100  5785  100  5760  33934  33787 --:--:-- --:--:-- --:--:-- 67911
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: LhduLxz0k7MbfJ4M1YopIedoNtE.*AAJTSQACMDEAAlNLABxmV0hTNTJqWWd1ZmtaTmpqNEE3Mmh0VVQ5Z3c9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 6279
+> 
+} [6279 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-39487710"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 6302
+< Date: Sun, 13 Apr 2025 07:41:11 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [6302 bytes data]
+100 12581  100  6302  100  6279  30831  30719 --:--:-- --:--:-- --:--:-- 61370100 12581  100  6302  100  6279  28633  28528 --:--:-- --:--:-- --:--:-- 57186
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: LhduLxz0k7MbfJ4M1YopIedoNtE.*AAJTSQACMDEAAlNLABxmV0hTNTJqWWd1ZmtaTmpqNEE3Mmh0VVQ5Z3c9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 6279
+> 
+} [6279 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-39487710"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 6302
+< Date: Sun, 13 Apr 2025 07:41:11 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [6302 bytes data]
+100 12581  100  6302  100  6279  33440  33318 --:--:-- --:--:-- --:--:-- 66920
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/authentication HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: LhduLxz0k7MbfJ4M1YopIedoNtE.*AAJTSQACMDEAAlNLABxmV0hTNTJqWWd1ZmtaTmpqNEE3Mmh0VVQ5Z3c9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 235
+> 
+} [235 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "991318768"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 1352
+< Date: Sun, 13 Apr 2025 07:41:11 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [1352 bytes data]
+100  1587  100  1352  100   235   4601    799 --:--:-- --:--:-- --:--:--  5416
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/authentication HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> iPlanetDirectoryPro: LhduLxz0k7MbfJ4M1YopIedoNtE.*AAJTSQACMDEAAlNLABxmV0hTNTJqWWd1ZmtaTmpqNEE3Mmh0VVQ5Z3c9AAR0eXBlAANDVFMAAlMxAAA.*
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 234
+> 
+} [234 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1810792949"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 1351
+< Date: Sun, 13 Apr 2025 07:41:12 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [1351 bytes data]
+100  1585  100  1351  100   234   5671    982 --:--:-- --:--:-- --:--:--  6659
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/realms/root/realm-config/services/validation?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: LhduLxz0k7MbfJ4M1YopIedoNtE.*AAJTSQACMDEAAlNLABxmV0hTNTJqWWd1ZmtaTmpqNEE3Mmh0VVQ5Z3c9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 105
+> 
+} [105 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1500806576"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 190
+< Date: Sun, 13 Apr 2025 07:41:12 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [190 bytes data]
+100   295  100   190  100   105    928    513 --:--:-- --:--:-- --:--:--  1439100   295  100   190  100   105    904    500 --:--:-- --:--:-- --:--:--  1404
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/realms/root/realm-config/services/baseurl?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: LhduLxz0k7MbfJ4M1YopIedoNtE.*AAJTSQACMDEAAlNLABxmV0hTNTJqWWd1ZmtaTmpqNEE3Mmh0VVQ5Z3c9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 74
+> 
+} [74 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-658790965"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 175
+< Date: Sun, 13 Apr 2025 07:41:12 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [175 bytes data]
+100   249  100   175  100    74    571    241 --:--:-- --:--:-- --:--:--   813
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/realms/root/realms/alpha/realm-config/services/baseurl?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: LhduLxz0k7MbfJ4M1YopIedoNtE.*AAJTSQACMDEAAlNLABxmV0hTNTJqWWd1ZmtaTmpqNEE3Mmh0VVQ5Z3c9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 74
+> 
+} [74 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-658790965"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 175
+< Date: Sun, 13 Apr 2025 07:41:13 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [175 bytes data]
+100   249  100   175  100    74    834    352 --:--:-- --:--:-- --:--:--  1191
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/services/baseurl HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: LhduLxz0k7MbfJ4M1YopIedoNtE.*AAJTSQACMDEAAlNLABxmV0hTNTJqWWd1ZmtaTmpqNEE3Mmh0VVQ5Z3c9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 196
+> 
+} [196 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "623209887"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 172
+< Date: Sun, 13 Apr 2025 07:41:13 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [172 bytes data]
+100   368  100   172  100   196   1125   1282 --:--:-- --:--:-- --:--:--  2405100   368  100   172  100   196   1058   1206 --:--:-- --:--:-- --:--:--  2257
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/services/baseurl HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: LhduLxz0k7MbfJ4M1YopIedoNtE.*AAJTSQACMDEAAlNLABxmV0hTNTJqWWd1ZmtaTmpqNEE3Mmh0VVQ5Z3c9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 196
+> 
+} [196 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "623209887"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 172
+< Date: Sun, 13 Apr 2025 07:41:13 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [172 bytes data]
+100   368  100   172  100   196   1162   1324 --:--:-- --:--:-- --:--:--  2503
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/services/id-repositories/LDAPv3ForOpenDS/OpenDJ HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5149
+> 
+} [5149 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1521421859"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5117
+< Date: Tue, 15 Apr 2025 03:38:30 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5117 bytes data]
+100 10266  100  5117  100  5149   4440   4468  0:00:01  0:00:01 --:--:--  8903100 10266  100  5117  100  5149   3953   3978  0:00:01  0:00:01 --:--:--  7927
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/services/id-repositories/LDAPv3ForOpenDS/OpenDJ HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5058
+> 
+} [5058 bytes data]
+100  5058    0     0  100  5058      0  11051 --:--:-- --:--:-- --:--:-- 11067* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1521421859"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5117
+< Date: Tue, 15 Apr 2025 03:38:33 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5117 bytes data]
+100 10175  100  5117  100  5058   2890   2857  0:00:01  0:00:01 --:--:--  5748100 10175  100  5117  100  5058   2874   2841  0:00:01  0:00:01 --:--:--  5716
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> DELETE /am/json/realms/root/realm-config/services/id-repositories/LDAPv3ForOpenDS/OpenDJ HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-587360145"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5110
+< Date: Tue, 15 Apr 2025 03:38:34 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5110 bytes data]
+100  5110  100  5110    0     0   9846      0 --:--:-- --:--:-- --:--:--  9845100  5110  100  5110    0     0   9136      0 --:--:-- --:--:-- --:--:--  9125
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-resource-server HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 169
+> 
+} [169 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1913746122"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/idm-resource-server
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5585
+< Date: Tue, 15 Apr 2025 03:38:34 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5585 bytes data]
+100  5754  100  5585  100   169   9905    299 --:--:-- --:--:-- --:--:-- 10220
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-provisioning HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 115
+> 
+} [115 bytes data]
+100   115    0     0  100   115      0    428 --:--:-- --:--:-- --:--:--   427* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "988155673"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/idm-provisioning
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5528
+< Date: Tue, 15 Apr 2025 03:38:35 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5528 bytes data]
+100  5643  100  5528  100   115   5988    124 --:--:-- --:--:-- --:--:--  6113
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 572
+> 
+} [572 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-462701502"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5987
+< Date: Tue, 15 Apr 2025 03:38:37 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5987 bytes data]
+100  6559  100  5987  100   572   3830    366  0:00:01  0:00:01 --:--:--  4199100  6559  100  5987  100   572   3476    332  0:00:01  0:00:01 --:--:--  3811
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 211
+> 
+} [211 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1751896439"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5626
+< Date: Tue, 15 Apr 2025 03:38:39 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5626 bytes data]
+100  5837  100  5626  100   211   5277    197  0:00:01  0:00:01 --:--:--  5480100  5837  100  5626  100   211   5185    194  0:00:01  0:00:01 --:--:--  5384
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-provisioning HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 115
+> 
+} [115 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "988155673"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-provisioning
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5528
+< Date: Tue, 15 Apr 2025 03:38:40 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5528 bytes data]
+100  5643  100  5528  100   115   7986    166 --:--:-- --:--:-- --:--:--  8154100  5643  100  5528  100   115   7724    160 --:--:-- --:--:-- --:--:--  7881
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 572
+> 
+} [572 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-462701502"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5987
+< Date: Tue, 15 Apr 2025 03:38:41 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5987 bytes data]
+100  6559  100  5987  100   572   3787    361  0:00:01  0:00:01 --:--:--  4148100  6559  100  5987  100   572   3732    356  0:00:01  0:00:01 --:--:--  4089
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-None-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 211
+> 
+} [211 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1751896439"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5626
+< Date: Tue, 15 Apr 2025 03:38:44 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5626 bytes data]
+100  5837  100  5626  100   211   4369    163  0:00:01  0:00:01 --:--:--  4531100  5837  100  5626  100   211   4089    153  0:00:01  0:00:01 --:--:--  4242
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-provisioning HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5536
+> 
+} [5536 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-2109559664"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5582
+< Date: Tue, 15 Apr 2025 03:38:45 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5582 bytes data]
+100 11118  100  5582  100  5536   4659   4620  0:00:01  0:00:01 --:--:--  9288100 11118  100  5582  100  5536   4636   4598  0:00:01  0:00:01 --:--:--  9241
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5879
+> 
+} [5879 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-2146567581"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5904
+< Date: Tue, 15 Apr 2025 03:38:46 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5904 bytes data]
+100 11783  100  5904  100  5879  19467  19385 --:--:-- --:--:-- --:--:-- 38887
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5891
+> 
+} [5891 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1772295802"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5920
+< Date: Tue, 15 Apr 2025 03:38:46 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5920 bytes data]
+100 11811  100  5920  100  5891  21685  21578 --:--:-- --:--:-- --:--:-- 43422
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5626
+> 
+} [5626 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1551081727"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5650
+< Date: Tue, 15 Apr 2025 03:38:46 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5650 bytes data]
+100 11276  100  5650  100  5626  15086  15022 --:--:-- --:--:-- --:--:-- 30149
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5638
+> 
+} [5638 bytes data]
+100  5638    0     0  100  5638      0  20337 --:--:-- --:--:-- --:--:-- 20280* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-155413966"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5666
+< Date: Tue, 15 Apr 2025 03:38:47 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5666 bytes data]
+100 11304  100  5666  100  5638  12914  12850 --:--:-- --:--:-- --:--:-- 25749
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-provisioning HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5536
+> 
+} [5536 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-2109559664"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5582
+< Date: Tue, 15 Apr 2025 03:38:48 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5582 bytes data]
+100 11118  100  5582  100  5536   8210   8142 --:--:-- --:--:-- --:--:-- 16350100 11118  100  5582  100  5536   8049   7983 --:--:-- --:--:-- --:--:-- 16020
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5879
+> 
+} [5879 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-2146567581"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5904
+< Date: Tue, 15 Apr 2025 03:38:48 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5904 bytes data]
+100 11783  100  5904  100  5879  15456  15390 --:--:-- --:--:-- --:--:-- 30926
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5891
+> 
+} [5891 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1772295802"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5920
+< Date: Tue, 15 Apr 2025 03:38:49 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5920 bytes data]
+100 11811  100  5920  100  5891  26263  26134 --:--:-- --:--:-- --:--:-- 52493
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5626
+> 
+} [5626 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1551081727"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5650
+< Date: Tue, 15 Apr 2025 03:38:49 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5650 bytes data]
+100 11276  100  5650  100  5626   9856   9814 --:--:-- --:--:-- --:--:-- 19713
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5638
+> 
+} [5638 bytes data]
+100  5638    0     0  100  5638      0   2787  0:00:02  0:00:02 --:--:--  2789100  5638    0     0  100  5638      0   2652  0:00:02  0:00:02 --:--:--  2654* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-155413966"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5666
+< Date: Tue, 15 Apr 2025 03:38:52 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5666 bytes data]
+100 11304  100  5666  100  5638   2192   2181  0:00:02  0:00:02 --:--:--  4376
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/realms/root/realm-config/services/oauth-oidc?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 320
+> 
+} [320 bytes data]
+100   320    0     0  100   320      0    233  0:00:01  0:00:01 --:--:--   233* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1078680552"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Transfer-Encoding: chunked
+< Date: Tue, 15 Apr 2025 03:38:54 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [8462 bytes data]
+100  8763    0  8443  100   320   5499    208  0:00:01  0:00:01 --:--:--  5708
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/realms/root/realms/alpha/realm-config/services/oauth-oidc?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 256
+> 
+} [256 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1280899799"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Transfer-Encoding: chunked
+< Date: Tue, 15 Apr 2025 03:38:56 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [7685 bytes data]
+100  7935    0  7679  100   256   5603    186  0:00:01  0:00:01 --:--:--  5791100  8635    0  8379  100   256   5156    157  0:00:01  0:00:01 --:--:--  5317
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/realms/root/realms/alpha/realm-config/services/validation?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 241
+> 
+} [241 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1683102482"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 326
+< Date: Tue, 15 Apr 2025 03:38:58 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [326 bytes data]
+100   567  100   326  100   241    194    143  0:00:01  0:00:01 --:--:--   338100   567  100   326  100   241    150    111  0:00:02  0:00:02 --:--:--   262
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/services/oauth-oidc HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 8504
+> 
+} [8504 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "162072837"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Transfer-Encoding: chunked
+< Date: Tue, 15 Apr 2025 03:39:01 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [8497 bytes data]
+100 16981    0  8477  100  8504   7564   7588  0:00:01  0:00:01 --:--:-- 15339100 16981    0  8477  100  8504   6693   6714  0:00:01  0:00:01 --:--:-- 13552
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/services/oauth-oidc HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 8440
+> 
+} [8440 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1773314108"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Transfer-Encoding: chunked
+< Date: Tue, 15 Apr 2025 03:39:02 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [7684 bytes data]
+100 16853    0  8413  100  8440   8706   8734 --:--:-- --:--:-- --:--:-- 17464
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/global-config/services/idm-integration HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 550
+> 
+} [550 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "481030720"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 371
+< Date: Tue, 15 Apr 2025 03:39:03 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [371 bytes data]
+100   921  100   371  100   550    973   1443 --:--:-- --:--:-- --:--:--  2417100   921  100   371  100   550    906   1344 --:--:-- --:--:-- --:--:--  2251
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/global-config/services/CorsService/configuration?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 591
+> 
+} [591 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1531044641"
+< Expires: 0
+< Location: http://am.example.com:8081/am/json/global-config/services/CorsService/configuration/Cors Configuration
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 721
+< Date: Tue, 15 Apr 2025 03:39:04 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [721 bytes data]
+100  1312  100   721  100   591    915    750 --:--:-- --:--:-- --:--:--  1664100  1312  100   721  100   591    856    702 --:--:-- --:--:-- --:--:--  1558
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/global-config/services/CorsService/configuration/Cors%20Configuration HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> Connection: keep-alive
+> iPlanetDirectoryPro: sliNyun7Md13MSuJtZP4Q_pfM6o.*AAJTSQACMDEAAlNLABxkRk5LMU04bXIvUWVhV0dsTlVVMUNBcVZ4Kzg9AAR0eXBlAANDVFMAAlMxAAA.*
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 721
+> 
+} [721 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1531044201"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 721
+< Date: Tue, 15 Apr 2025 03:39:05 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [721 bytes data]
+100  1442  100   721  100   721   1250   1250 --:--:-- --:--:-- --:--:--  2507100  1442  100   721  100   721   1219   1219 --:--:-- --:--:-- --:--:--  2444
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> iPlanetDirectoryPro: 7mMy3QwwB8vaJXmK8c5SXUYfffc.*AAJTSQACMDEAAlNLABxCclo1MWp4YXFQZDJ4NEdiNVhueks0RHRmbHM9AAR0eXBlAANDVFMAAlMxAAA.*
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5760
+> 
+} [5760 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1771084098"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5785
+< Date: Tue, 15 Apr 2025 03:41:52 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5785 bytes data]
+100 11545  100  5785  100  5760  19436  19352 --:--:-- --:--:-- --:--:-- 38872
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/end-user-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> iPlanetDirectoryPro: 7mMy3QwwB8vaJXmK8c5SXUYfffc.*AAJTSQACMDEAAlNLABxCclo1MWp4YXFQZDJ4NEdiNVhueks0RHRmbHM9AAR0eXBlAANDVFMAAlMxAAA.*
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 5760
+> 
+} [5760 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1771084098"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 5785
+< Date: Tue, 15 Apr 2025 03:41:53 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [5785 bytes data]
+100 11545  100  5785  100  5760  26905  26789 --:--:-- --:--:-- --:--:-- 53697100 11545  100  5785  100  5760  25250  25141 --:--:-- --:--:-- --:--:-- 50414
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: 7mMy3QwwB8vaJXmK8c5SXUYfffc.*AAJTSQACMDEAAlNLABxCclo1MWp4YXFQZDJ4NEdiNVhueks0RHRmbHM9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 6279
+> 
+} [6279 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-39487710"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 6302
+< Date: Tue, 15 Apr 2025 03:41:53 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [6302 bytes data]
+100 12581  100  6302  100  6279  19377  19306 --:--:-- --:--:-- --:--:-- 38710
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/agents/OAuth2Client/idm-admin-ui HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=2.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: 7mMy3QwwB8vaJXmK8c5SXUYfffc.*AAJTSQACMDEAAlNLABxCclo1MWp4YXFQZDJ4NEdiNVhueks0RHRmbHM9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Match: *
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 6279
+> 
+} [6279 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-39487710"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 6302
+< Date: Tue, 15 Apr 2025 03:41:53 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [6302 bytes data]
+100 12581  100  6302  100  6279  21323  21245 --:--:-- --:--:-- --:--:-- 42647
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/authentication HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: 7mMy3QwwB8vaJXmK8c5SXUYfffc.*AAJTSQACMDEAAlNLABxCclo1MWp4YXFQZDJ4NEdiNVhueks0RHRmbHM9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 235
+> 
+} [235 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "991318768"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 1352
+< Date: Tue, 15 Apr 2025 03:41:55 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [1352 bytes data]
+100  1587  100  1352  100   235    936    162  0:00:01  0:00:01 --:--:--  1099100  1587  100  1352  100   235    927    161  0:00:01  0:00:01 --:--:--  1088
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/authentication HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> iPlanetDirectoryPro: 7mMy3QwwB8vaJXmK8c5SXUYfffc.*AAJTSQACMDEAAlNLABxCclo1MWp4YXFQZDJ4NEdiNVhueks0RHRmbHM9AAR0eXBlAANDVFMAAlMxAAA.*
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 234
+> 
+} [234 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-1810792949"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 1351
+< Date: Tue, 15 Apr 2025 03:41:55 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [1351 bytes data]
+100  1585  100  1351  100   234   4149    718 --:--:-- --:--:-- --:--:--  4876
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/realms/root/realm-config/services/validation?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: 7mMy3QwwB8vaJXmK8c5SXUYfffc.*AAJTSQACMDEAAlNLABxCclo1MWp4YXFQZDJ4NEdiNVhueks0RHRmbHM9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 105
+> 
+} [105 bytes data]
+100   105    0     0  100   105      0    431 --:--:-- --:--:-- --:--:--   432* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "1500806576"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 190
+< Date: Tue, 15 Apr 2025 03:41:56 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [190 bytes data]
+100   295  100   190  100   105    594    328 --:--:-- --:--:-- --:--:--   921
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/realms/root/realm-config/services/baseurl?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: 7mMy3QwwB8vaJXmK8c5SXUYfffc.*AAJTSQACMDEAAlNLABxCclo1MWp4YXFQZDJ4NEdiNVhueks0RHRmbHM9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 74
+> 
+} [74 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-658790965"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 175
+< Date: Tue, 15 Apr 2025 03:41:56 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [175 bytes data]
+100   249  100   175  100    74    443    187 --:--:-- --:--:-- --:--:--   631
+* Connection #0 to host am.example.com left intact
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> POST /am/json/realms/root/realms/alpha/realm-config/services/baseurl?_action=create HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: 7mMy3QwwB8vaJXmK8c5SXUYfffc.*AAJTSQACMDEAAlNLABxCclo1MWp4YXFQZDJ4NEdiNVhueks0RHRmbHM9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 74
+> 
+} [74 bytes data]
+100    74    0     0  100    74      0    265 --:--:-- --:--:-- --:--:--   265* Mark bundle as not supporting multiuse
+< HTTP/1.1 201 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "-658790965"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 175
+< Date: Tue, 15 Apr 2025 03:41:57 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [175 bytes data]
+100   249  100   175  100    74    583    246 --:--:-- --:--:-- --:--:--   830
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realm-config/services/baseurl HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: 7mMy3QwwB8vaJXmK8c5SXUYfffc.*AAJTSQACMDEAAlNLABxCclo1MWp4YXFQZDJ4NEdiNVhueks0RHRmbHM9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 196
+> 
+} [196 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "623209887"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 172
+< Date: Tue, 15 Apr 2025 03:41:57 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [172 bytes data]
+100   368  100   172  100   196    366    417 --:--:-- --:--:-- --:--:--   784
+* Connection #0 to host am.example.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8081...
+* Connected to am.example.com (127.0.0.1) port 8081 (#0)
+> PUT /am/json/realms/root/realms/alpha/realm-config/services/baseurl HTTP/1.1
+> Host: am.example.com:8081
+> Accept: application/json, text/javascript, */*; q=0.01
+> Accept-API-Version: protocol=1.0,resource=1.0
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US
+> Cache-Control: no-cache
+> iPlanetDirectoryPro: 7mMy3QwwB8vaJXmK8c5SXUYfffc.*AAJTSQACMDEAAlNLABxCclo1MWp4YXFQZDJ4NEdiNVhueks0RHRmbHM9AAR0eXBlAANDVFMAAlMxAAA.*
+> Connection: keep-alive
+> Content-Type: application/json
+> Origin: http://am.example.com:8081
+> Referer: http://am.example.com:8081/am/ui-admin/
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+> X-Requested-With: XMLHttpRequest
+> Content-Length: 196
+> 
+} [196 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< X-Frame-Options: SAMEORIGIN
+< X-Content-Type-Options: nosniff
+< Cache-Control: private
+< Content-API-Version: resource=1.0
+< Content-Security-Policy: default-src 'none';frame-ancestors 'none';sandbox
+< Cross-Origin-Opener-Policy: same-origin
+< Cross-Origin-Resource-Policy: same-origin
+< ETag: "623209887"
+< Expires: 0
+< Pragma: no-cache
+< Content-Type: application/json;charset=UTF-8
+< Content-Length: 172
+< Date: Tue, 15 Apr 2025 03:41:58 GMT
+< Keep-Alive: timeout=20
+< Connection: keep-alive
+< 
+{ [172 bytes data]
+100   368  100   172  100   196    784    893 --:--:-- --:--:-- --:--:--  1680
+* Connection #0 to host am.example.com left intact

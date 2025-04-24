@@ -94,11 +94,11 @@ sudo systemctl start openidm
 
 # Verify service is running
 echo "Checking service status..."
-sleep 10 # Give it some time to start
+#sleep 10 # Give it some time to start
 systemctl status openidm --no-pager
 
-#/vagrant/scripts/idm/checkIDMStatus.sh
-sleep 50
+/vagrant/scripts/idm/checkIDMStatus.sh
+#sleep 50
 # Optional: Wait for OpenIDM to be fully ready
 # echo "Waiting for OpenIDM to be ready..."
 # attempt=1

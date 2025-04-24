@@ -1,0 +1,29 @@
+#
+# Copyright 2020-2023 ForgeRock AS. All Rights Reserved
+#
+# Use of this code requires a commercial software license with ForgeRock AS.
+# or with one of its affiliates. All use shall be exclusively subject
+# to such license between the licensee and ForgeRock AS.
+
+[Unit]
+Description=ForgeRock Directory Services
+Wants=network-online.target
+After=network-online.target
+Conflicts=shutdown.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+Restart=no
+TimeoutSec=5min
+IgnoreSIGPIPE=no
+KillMode=control-group
+GuessMainPID=no
+RemainAfterExit=yes
+Environment=AM_IG_AGENT_ID='U2VjQXV0aDA='
+ExecStart=/app/forgerock/install/ig/bin/start.sh /app/forgerock/config/.openig
+ExecStop=/app/forgerock/install/ig/bin/stop.sh	/app/forgerock/config/.openig
+
+[Install]
+WantedBy=multi-user.target

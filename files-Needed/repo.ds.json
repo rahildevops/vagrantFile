@@ -31,7 +31,7 @@
       "authentication": {
         "simple": {
           "bindDn": "uid=admin",
-          "bindPassword": "SecAuth012456"
+          "bindPassword": "str0ngAdm1nPa55word"
         }
       }
     }

@@ -62,18 +62,19 @@ sleep_time_long=$(get_property "sleep_time_long" "$PROPERTIES_FILE")
   sudo systemctl daemon-reload
   sudo systemctl start opendj
   echo installation of DS completed succesfully!!!!
-  sudo sleep ${sleep_time_long}
+  /vagrant/scripts/ig/1636_service_start_status.sh
 
   #6. Creating file to run DS as a service.
   sudo ${install_location}opendj/bin/create-rc-script --groupName rahil --userName rahil --systemdService /etc/systemd/system/opendj.service
-  echo starting the ds ......
+  echo starting the ds to run as a service......
   sudo chown -R rahil:rahil /app 
   sudo systemctl daemon-reload
   sudo systemctl stop opendj
-  sudo sleep ${sleep_time_long}
+  /vagrant/scripts/ig/1636_service_stop_status.sh
+  #sudo sleep ${sleep_time_long}
   sudo systemctl start opendj
   sudo systemctl enable opendj
-
+  /vagrant/scripts/ig/1636_service_start_status.sh
   #7. Creating tools.properties file 
   mkdir /home/rahil/.opendj
   cat > /home/rahil/.opendj/tools.properties <<EOF
